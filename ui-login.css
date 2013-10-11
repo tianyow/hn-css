@@ -1,0 +1,173 @@
+.hn-loginWrap {
+
+    -fx-font-family: "Microsoft JhengHei", monospace, sans-serif;
+    -fx-font-size: 18;
+
+    -fx-gray-light:      #7c7c7c;
+    -fx-gray-dark:       #525252;
+
+    -fx-background-color: radial-gradient(center 50% 50%, radius 80%, -fx-base-ultraLight 0, -fx-base-lighter 40%, -fx-base-light 70%);
+    -fx-focus-color: derive(-fx-base-dark, -50%);
+}
+
+.hn-login-gradient-mask {
+    -fx-background-color: linear-gradient(-fx-base 0%, rgba(255,255,255,0) 100%);
+}
+
+/** Login-Panel **/
+
+.hn-login-panel {
+    -fx-font-weight: bold;
+}
+.hn-login-panel .text-field {
+    -fx-background-radius: 3;
+    -fx-font-weight: bold;
+    -fx-padding: 0 10 0 10;
+    -fx-highlight-fill: -fx-base-ultraDark;
+    -fx-effect: innershadow(gaussian, #999999, 10, 0.5, 0, 0);
+}
+.hn-login-panel .text-field:focused {
+    -fx-background-color: -fx-focus-color, #cccccc, linear-gradient( white 0%, white 100%), linear-gradient(-fx-base-light 0%, -fx-base-ultraLight 30%);
+    -fx-font-weight: bold;
+}
+.hn-login-panel .combo-box-base,
+.hn-login-panel .combo-box-base .arrow-button {
+    -fx-background-radius: 2;
+    -fx-font-size: 15;
+}
+.hn-login-panel .separator .line {
+    -fx-border-style: none;
+    -fx-border-width: 1;
+}
+.hn-login-panel .separator:horizontal .line {
+    -fx-background-color: rgba(255,255,255,0), linear-gradient(to bottom, #cccccc 0, rgba(255,255,255,0) 100%);
+    -fx-background-insets: 1 1 0 1,1;
+    -fx-padding: 5 0 3 0;
+    -fx-opacity: 0.7;
+}
+.hn-login-Username {
+    -fx-background-image: url('../images/icon-login-username.png');
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 8 8;
+}
+.hn-login-Password {
+    -fx-background-image: url('../images/icon-login-password.png');
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 8 8;
+}
+.hn-login-BankNo {
+    -fx-background-image: url('../images/icon-login-bankNo.png');
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 8 8;
+}
+.hn-login-BtnWrap {
+    -fx-background-color: linear-gradient(#cccccc 0, rgba(255,255,255,0) 20%);
+}
+.hn-login-Btn {
+    -fx-background-color: rgba(255,255,255,0), rgba(255,255,255,0), linear-gradient(to bottom, -fx-gray-light 0%, -fx-gray-dark 100%), linear-gradient(to bottom, derive(-fx-gray-light,-20%) 0%, derive(-fx-gray-dark,-20%) 100%);
+    -fx-background-insets: 0,0,0,1;
+    -fx-background-radius: 3;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(one-pass-box, derive(-fx-gray-dark, -30%), 1, 1.0, 0, 2);
+}
+.hn-login-Btn:focused {
+    -fx-background-color: white, rgba(255,255,255,0), linear-gradient(to bottom, derive(-fx-gray-dark, -20%) 0%, -fx-gray-dark 100%), linear-gradient(to bottom, derive(-fx-gray-light, 10%) 0%, -fx-gray-dark 100%);
+}
+.hn-login-Btn:hover:pressed,
+.hn-login-Btn:armed {
+    -fx-background-color: white, rgba(255,255,255,0), linear-gradient(to bottom, -fx-gray-dark 0%, derive(-fx-gray-dark, -30%)  100%), linear-gradient(to bottom, derive(-fx-gray-dark, -30%) 0%, -fx-gray-dark 100%);
+    -fx-background-insets: 1 0 0 0;
+    -fx-padding: 1 0 0 0;
+}
+
+/** Login BottomBar **/
+
+.hn-login-bottomBar {
+    -fx-background-color: radial-gradient(center 50% 0%, radius 80%, -fx-base-light 0, -fx-base-darker 70%);
+}
+.hn-login-bottomBarShadow {
+    -fx-background-color: linear-gradient(to right, -fx-base-ultraDark 20%, -fx-base-dark 50%, -fx-base-ultraDark 80%);
+}
+
+/** login BroadCastWrap **/
+
+.hn-login-broadCastWrap {
+    -fx-background-radius: 2;
+    -fx-background-color: linear-gradient(-fx-base 0, white 100%);
+    -fx-effect: innershadow(gaussian, #666666, 10, 0.1, 0, 0);
+}
+
+.hn-login-dateTimeBox {
+    -fx-background-color: rgba(41, 41, 41, 0.80);
+    -fx-font-family: Arial;
+}
+.hn-login-date {
+    -fx-text-fill: white;
+}
+.hn-login-timebox {
+    -fx-background-color: linear-gradient(#CAFAA4 0, #e6ffd8 100%);
+    -fx-background-radius: 1;
+    -fx-border-color: derive(-fx-base-light, -40%);
+    -fx-border-width: 0;
+    -fx-effect: innershadow(gaussian, #666666, 10, 0.1, 0, 0);
+}
+.hn-login-time {
+    -fx-text-fill: black;
+}
+
+/** login InfoWrap **/
+
+.hn-login-infoWrap {
+    -fx-minimize-color1: #222222;
+    -fx-minimize-color2: #777777;
+    -fx-logout-color1: #790000;
+    -fx-logout-color2: #FF0000;
+}
+.hn-login-infoWrap .label {
+    -fx-font-family: Arial;
+}
+.hn-login-infoTitle {
+    -fx-font-size: 13;
+    -fx-text-fill: -fx-base-darker;
+}
+.hn-login-infoValue {
+    -fx-font-size: 18;
+    -fx-text-fill: -fx-gray-light;
+}
+
+/** Login Window Control Buttons **/
+
+.hn-minimize.button {
+    -fx-background-color: linear-gradient(-fx-minimize-color1 0, -fx-minimize-color2 100%);
+    -fx-background-radius: 1 0 0 0;
+    -fx-border-width: 0 0 3 0;
+    -fx-border-color: -fx-minimize-color1;
+    -fx-cursor: hand;
+}
+.hn-minimize.button:focused {
+    -fx-background-color: linear-gradient(to bottom, derive(-fx-minimize-color1, 10%) 0%, derive(-fx-minimize-color2, 30%) 100%);
+    -fx-background-insets: 0;
+}
+.hn-minimize.button:hover:pressed,
+.hn-minimize.button:armed {
+    -fx-background-color: linear-gradient(to bottom, derive(-fx-minimize-color1, -50%) 0%, derive(-fx-minimize-color2, -30%) 100%);
+    -fx-background-insets: 0;
+    -fx-padding: 1 0 0 0;
+}
+.hn-logout.button {
+    -fx-background-color: linear-gradient(-fx-logout-color1 0, -fx-logout-color2 100%);
+    -fx-background-radius: 0 1 0 0;
+    -fx-border-width: 0 0 3 0;
+    -fx-border-color: -fx-logout-color1;
+    -fx-cursor: hand;
+}
+.hn-logout.button:focused {
+    -fx-background-color: linear-gradient(to bottom, derive(-fx-logout-color1, 10%) 0%, derive(-fx-logout-color2, 30%) 100%);
+    -fx-background-insets: 0;
+}
+.hn-logout.button:hover:pressed,
+.hn-logout.button:armed {
+    -fx-background-color: linear-gradient(to bottom, derive(-fx-logout-color1, -50%) 0%, derive(-fx-logout-color2, -30%) 100%);
+    -fx-background-insets: 0;
+    -fx-padding: 1 0 0 0;
+}

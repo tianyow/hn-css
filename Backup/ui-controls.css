@@ -1,0 +1,391 @@
+/*******************
+
+/** UI Controls
+01. TextInput
+02. TextField
+03. PasswordField
+04. TextArea
+05. TableView
+06. Pagination
+07. Button
+08. ToggleButton
+09. CheckBox
+10. RadioButton
+11. ComboBoxBase
+12. ComboBox
+13. ScrollPane
+14. TabPane
+15. TitledPane
+
+/** Misc
+a. Separator
+b. Tooltip
+c. ProgressBar
+d. ProgressIndicator
+
+*******************/
+
+/*** 02. TextField ***/
+.text-field {
+    -fx-padding: 3 5 3 5;
+    -fx-border-radius: 1;
+    -fx-background-color: #999999, white, linear-gradient( white 0%, white 100%), linear-gradient(rgb(230,230,230) 0%, white 35%);
+    -fx-highlight-fill: -fx-focus-color;
+    -fx-highlight-text-fill: white;
+    -fx-effect: dropshadow(one-pass-box, gray, 1, 1.0, 0, 1);
+}
+.text-field.hn-required {
+    -fx-background-color: #999999, white, linear-gradient( white 0%, white 100%), -fx-required-gradient;
+}
+.text-field:focused,
+.text-field.hn-required:focused {
+    -fx-background-color: -fx-focus-color, #cccccc, linear-gradient( white 0%, white 100%), -fx-focus-gradient;
+}
+.text-field:disabled {
+    -fx-background-color: #999999, #eeeeee, linear-gradient( white 0%, white 100%), linear-gradient(rgb(204,204,204) 0%, rgb(204,204,204) 100%);
+}
+
+/*** 06. Pagination ***/
+.pagination {
+    -fx-padding: 0;
+    -fx-arrows-visible: true;
+    -fx-tooltip-visible: false;
+    -fx-page-information-visible: false;
+    -fx-page-information-alignment: bottom;
+}
+.pagination .page {
+    -fx-background-color: transparent;
+}
+
+.pagination .pagination-control .left-arrow {
+    -fx-background-color: -fx-mark-color;
+    -fx-background-insets: 1;
+
+    -fx-shape: "m 11.499,17.75 -2.889,0 -3.86,-4.124 3.86,-4.125 2.889,0 -3.375,4.125 3.375,4.124 z";
+    -fx-scale-shape: true;
+}
+.pagination .pagination-control .right-arrow {
+    -fx-background-color: -fx-mark-color;
+    -fx-background-insets: 1;
+    -fx-shape: "m 4.75,9.501 2.889,0 3.86,4.124 -3.86,4.125 -2.889,0 L 8.125,13.625 4.75,9.501 z";
+    -fx-scale-shape: true;
+}
+.pagination .pagination-control .bullet-button {
+    -fx-background-color: -fx-mark-color;
+    -fx-background-insets: 4,5,6;
+    -fx-background-radius: 4em, 4em, 4em;
+    -fx-padding: 0.333em;
+}
+.pagination .pagination-control .left-arrow-button{
+    -fx-padding: 2;
+}
+.pagination .pagination-control .right-arrow-button {
+    -fx-padding: 2;
+}
+.pagination .pagination-control .number-button {
+    -fx-padding: 2;
+}
+.pagination .pagination-control .bullet-button:hover {
+}
+.pagination .pagination-control .bullet-button:pressed {
+    -fx-background-insets: 4,5,6,7;
+}
+.pagination .pagination-control .bullet-button:selected {
+    -fx-background-insets: 4,5,6;
+}
+.pagination.bullet .pagination-control .left-arrow-button, .pagination.bullet .pagination-control .right-arrow-button {
+}
+.pagination .pagination-control .number-button {
+    -fx-background-insets: 0,1,2;
+}
+.pagination .pagination-control .number-button:hover {
+    -fx-background-insets: 0,1,2;
+}
+.pagination .pagination-control .number-button:pressed {
+    -fx-background-insets: 0,1,2,3;
+}
+.pagination .pagination-control .number-button:selected {
+    -fx-base: -fx-base-darker;
+    -fx-background-color: linear-gradient(-fx-base 10%, derive(-fx-base, -30%) 100%);
+    -fx-background-insets: 0,1,2;
+}
+
+/*** 07. Button ***/
+.button {
+}
+.button:focused {
+}
+.button:focused:hover {
+}
+.button:hover {
+}
+.button:default {
+}
+.button:default:hover {
+}
+.button:default:focused {
+}
+.button:default:focused:hover {
+}
+.button:focused:hover:pressed, .button:armed,
+.button:default:focused:hover:pressed, .button:default:armed {
+}
+
+/*** 09. CheckBox ***/
+.check-box {
+    -fx-padding: 2 2 2 0;
+}
+.check-box .box {
+    -fx-background-color: transparent, #999999, linear-gradient( white 0%, white 100%), -fx-box-gradient;
+    -fx-background-radius: 2;
+    -fx-padding: 5;
+    -fx-effect: dropshadow(one-pass-box, gray, 1, 1.0, 0, 1);
+}
+.check-box.hn-required .box {
+    -fx-background-color: transparent, #999999, linear-gradient( white 0%, white 100%), -fx-required-gradient;
+}
+.check-box:focused .box,
+.check-box.hn-required:focused .box {
+    -fx-background-color: -fx-focus-color, #cccccc, linear-gradient( white 0%, white 100%), -fx-focus-gradient;
+}
+.check-box:hover .box {
+}
+.check-box:focused:hover .box {
+}
+.check-box:armed .box {
+}
+.check-box:focused:selected:armed .box {
+}
+.check-box:selected .box {
+}
+.check-box:selected:focused .box {
+}
+.check-box:focused:pressed .box {
+}
+.check-box .mark {
+    -fx-shape: "M5.30273 11.5381 0 6.14893 1.81934 4.35889 5.21973 7.81348 12.2476 0 14.146 1.70703 5.30273 11.5381Z";
+    /*-fx-shape: "M14.000 14.000 L 0.000 14.000 L 0.000 0.000 L 14.000 0.000 L 14.000 14.000Z";*/
+    -fx-background-insets: -1 -2;
+}
+.check-box:indeterminate .mark {
+    -fx-background-color: -fx-mark-color;
+    -fx-scale-shape: false;
+}
+.check-box:selected .mark {
+    -fx-background-color: linear-gradient(#777777 0, #333333 70%, #555555 100%);
+}
+/*** 10. RadioButton ***/
+.radio-button {
+    -fx-padding: 3 3 3 0;
+}
+.radio-button .radio {
+    -fx-background-color:  transparent, #999999, linear-gradient( white 0%, white 100%), -fx-box-gradient;
+    -fx-padding: 4;
+    -fx-effect: dropshadow(one-pass-box, gray, 1, 1.0, 0, 1);
+}
+.radio-button.hn-required .radio {
+    -fx-background-color:  transparent, #999999, linear-gradient( white 0%, white 100%), -fx-required-gradient;
+}
+.radio-button:focused .radio,
+.radio-button.hn-required:focused .radio{
+    -fx-background-color: -fx-focus-color, #cccccc, linear-gradient( white 0%, white 100%), -fx-focus-gradient;
+}
+.radio-button:hover .radio {
+}
+.radio-button:hover:focused .radio {
+}
+.radio-button:focused:pressed .radio {
+}
+.radio-button:selected .radio {
+}
+.radio-button:selected:focused .radio {
+}
+.radio-button:armed .radio {
+}
+.radio-button:focused:selected:armed .radio {
+}
+.radio-button .dot {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-background-radius: 1.0em;
+    -fx-padding: 5;
+}
+.radio-button:selected .dot {
+    -fx-background-color: linear-gradient(#777777 0, #333333 70%, #555555 100%);
+    -fx-background-insets: 0;
+}
+
+/*** 11. ComboBoxBase ***/
+.combo-box-base {
+    -fx-background-color: transparent, #999999, linear-gradient( white 0%, white 100%), -fx-box-gradient;
+    -fx-background-radius: 1;
+    -fx-effect: dropshadow(one-pass-box, gray, 1, 1.0, 0, 1);
+}
+.combo-box.hn-required,
+.combo-box.hn-required .arrow-button {
+    -fx-background-color: transparent, #999999, linear-gradient( white 0%, white 100%), -fx-required-gradient;
+}
+.combo-box-base:hover {
+}
+.combo-box-base:focused:showing, .combo-box-base:focused:showing:hover {
+}
+.combo-box-base:focused,
+.combo-box-base:focused .arrow-button,
+.combo-box.hn-required:focused,
+.combo-box.hn-required:focused .arrow-button {
+    -fx-background-color: -fx-focus-color, #cccccc, linear-gradient( white 0%, white 100%), -fx-focus-gradient;
+}
+.combo-box-base:focused:hover {
+}
+.combo-box-base:focused:pressed {
+}
+.combo-box-base .arrow-button {
+    -fx-background-color: transparent, #cccccc, linear-gradient( #cccccc 0%, white 100%), -fx-box-gradient;
+    -fx-background-radius: 0 1 1 0;
+    -fx-background-insets: 2;
+}
+.combo-box-base:hover .arrow-button{
+}
+.combo-box-base:editable:hover .arrow-button,
+.combo-box-base:editable:focused:pressed .arrow-button {
+}
+.combo-box-base:editable .arrow-button:hover{
+}
+.combo-box-base:editable:focused .arrow-button:pressed{
+}
+.combo-box-base:focused:pressed .arrow-button,
+.combo-box-base:focused:showing .arrow-button,
+.combo-box-base:focused:showing:hover .arrow-button {
+}
+.combo-box-base .arrow {
+}
+.combo-box-base:editable .combo-box-base {
+}
+.combo-box-base:editable .text-field {
+}
+.combo-box-base:editable:hover .text-field {
+}
+.combo-box-base:editable .text-field:focused {
+}
+
+/*** 12. ComboBox ***/
+.combo-box {
+    -fx-background-radius: 2;
+}
+.combo-box .list-cell {
+    -fx-background: transparent;
+    -fx-background-color: transparent;
+    -fx-padding: 2 0 3 7;
+}
+.combo-box-popup .list-view {
+    -fx-background-color: rgb(76,81,86),rgb(228,233,238);
+    -fx-background-insets: 0,1;
+}
+
+/*** 13. ScrollPane ***/
+.scroll-pane {
+    -fx-background-color: linear-gradient(#bbbbbb 0, #dddddd 10%), linear-gradient(derive(-fx-base-ultraLight, -5%) 0, -fx-base-ultraLight 10%);
+}
+
+/*** 14. TabPane ***/
+.tab-pane {
+    -fx-background-color: transparent;
+}
+.tab-pane *.tab-header-background {
+    -fx-background-color: linear-gradient(transparent 85%, rgba(230,230,230,.2) 100%);
+}
+.tab-pane .headers-region {
+    -fx-effect: null;
+    -fx-translate-x: -6;
+}
+.tab {
+    -fx-background-insets: 1 4 0 1;
+    -fx-background-radius: 1 1 0 0;;
+    -fx-padding: 0 30 0 30;
+}
+.tab:top {
+    -fx-background-color: linear-gradient(derive(-fx-base,-20%) 70%, derive(-fx-base,-30%) 100%);
+}
+.tab:top:hover {
+    -fx-background-color: linear-gradient(derive(-fx-base,-10%) 70%, derive(-fx-base,-20%) 100%);
+}
+.tab:selected, .tab:selected:hover {
+    -fx-background-color: linear-gradient(-fx-base-light 30%, -fx-base-ultraLight 100%);
+}
+.tab-close-button {
+    -fx-background-color: -fx-mark-color;
+    -fx-shape: "M 0,0 H1 L 4,3 7,0 H8 V1 L 5,4 8,7 V8 H7 L 4,5 1,8 H0 V7 L 3,4 0,1 Z";
+    -fx-scale-shape: false;
+    -fx-background-insets: 0;
+}
+.tab-close-button:hover {
+    -fx-background-color: white;
+}
+.tab-content-area {
+    /* TabPane Frame*/
+    -fx-background-color: #cccccc, white;
+}
+
+/*** 15. TitledPane ***/
+.titled-pane:focused {
+    -fx-text-fill: -fx-text-base-color;
+}
+.titled-pane > .title {
+    -fx-background-color: gray;
+    -fx-background-insets: 0,1,2;
+    -fx-background-radius: 0;
+    -fx-padding: 2;
+}
+.titled-pane:hover > .title {
+    -fx-background-color: #333333;
+}
+.titled-pane > .title .text {
+    -fx-padding: 0 0 12 0;
+}
+.titled-pane > .title > .arrow-button {
+    -fx-background-color: transparent,-fx-base-dark, linear-gradient(to bottom,red 0%,blue 100%), linear-gradient(to bottom,yellow 0%,green 100%);;
+    -fx-background-insets: 0,4,5,6;
+    -fx-background-radius: 0;
+    -fx-padding: 10;
+}
+.titled-pane:focused > .title .arrow-button {
+    -fx-background-color: -fx-base-dark, linear-gradient(to bottom,red 0%,blue 100%), linear-gradient(to bottom,yellow 0%,green 100%);
+    -fx-background-insets: 4,5,6;
+}
+.titled-pane:focused > .title, .titled-pane:focused > .title:hover {
+    -fx-background-color: -fx-base-dark, linear-gradient(to bottom,red 0%,blue 100%), linear-gradient(to bottom,yellow 0%,green 100%);
+    -fx-background-insets: 0,1,2;
+}
+.titled-pane > .title > .arrow-button .arrow {
+    -fx-background-color: -fx-mark-color;
+    -fx-background-insets: 0;
+    -fx-shape: "m 12.249,10.251 0,2.889 L 8.125,17 4,13.14 l 0,-2.889 4.125,3.375 4.124,-3.375 z";
+    -fx-padding: 6 7 0 0;
+}
+.titled-pane:collapsed > .title > .arrow-button .arrow {
+    -fx-padding: 6 0 0 7;
+}
+.titled-pane > *.content {
+    -fx-background-color: -fx-base-dark, -fx-base-light, -fx-base-ultraLight;
+    -fx-background-insets:-1 0 0 0,0 1 1 1,1 2 2 2;
+    -fx-padding: 0.167em;
+}
+.titled-pane:focused > .title > .arrow-button .arrow {
+    -fx-background-color: -fx-mark-color;
+}
+
+
+/*** b. Tooltip ***/
+.tooltip {
+    -fx-background-color:rgb(76,81,86), rgb(209,214,219), rgb(228,233,238);
+    -fx-background-insets: 0,1,2;
+    -fx-background-radius: 0 0 0 0;
+    -fx-padding: 4 8 4 8;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.4) , 4, 0.0 , 4 , 5 );
+}
+.page-corner {
+    -fx-padding: 0;
+    -fx-background-color: transparent;
+    -fx-shape: " ";
+    -fx-effect: null;
+}

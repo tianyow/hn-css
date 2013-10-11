@@ -1,0 +1,65 @@
+/***** Theme Colors *****/
+
+/* Spring  */
+.hn-mainWrap {
+    -fx-base:            rgb(211, 248, 162);
+
+    -fx-base-ultraLight: rgb(245, 255, 230);
+    -fx-base-lighter:    rgb(222, 252, 151);
+    -fx-base-light:      rgb(202, 237, 119);
+    -fx-base-dark:       rgb(136, 203,  56);
+    -fx-base-darker:     rgb( 94, 183,   0);
+    -fx-base-ultraDark:  rgb( 57, 174,  58);
+
+    -fx-base-sub1:       rgb( 10, 124,  86);
+    -fx-base-sub2:       rgb( 10, 116, 106);
+    -fx-base-sub3:       rgb( 10,  88,  86);
+    -fx-base-sub4:       rgb(221, 255, 224);
+
+    -fx-base-gradient: linear-gradient(to right, -fx-base-light 5%, -fx-base-lighter 50%, -fx-base-light 95%);
+}
+
+/*  Summer  *
+.hn-mainWrap {
+    -fx-base:          rgb(213, 239, 255);
+
+    -fx-base-light:    rgb(233, 248, 255);
+    -fx-base-midLight: rgb(185, 231, 255);
+    -fx-base-mid:      rgb(123, 219, 255);
+    -fx-base-midDark:  rgb(5, 192, 242);
+    -fx-base-dark:     rgb(5, 126, 163);
+    -fx-base-deepDark: rgb(22, 76, 141);
+
+    -fx-base-gradient: linear-gradient(to right, -fx-base-midDark 0%, -fx-base-mid 10%, -fx-base-midLight 50%, -fx-base-mid 90%, -fx-base-midDark 100%);
+}
+*/
+
+/* Fall *
+.hn-mainWrap {
+    -fx-base: rgb(255, 254, 228);
+
+    -fx-base-light:    rgb(253, 255, 240);
+    -fx-base-midLight: rgb(255, 254, 175);
+    -fx-base-mid:      rgb(255, 227, 139);
+    -fx-base-midDark:  rgb(242, 203, 60);
+    -fx-base-dark:     rgb(204, 143, 2);
+    -fx-base-deepDark: rgb(143, 84, 4);
+
+    -fx-base-gradient: linear-gradient(to right, -fx-base-midDark 0%, -fx-base-mid 10%, -fx-base-midLight 50%, -fx-base-mid 90%, -fx-base-midDark 100%);
+}
+*/
+
+/* Winter *
+.hn-mainWrap {
+    -fx-base: rgb(255, 241, 243);
+
+    -fx-base-light:     rgb(255, 247, 244);
+    -fx-base-midLight:  rgb(255, 219, 214);
+    -fx-base-mid:       rgb(240, 180, 186);
+    -fx-base-midDark:   rgb(236, 125, 125);
+    -fx-base-dark:      rgb(204, 0, 69);
+    -fx-base-deepDark: rgb(153, 16, 47);
+
+    -fx-base-gradient: linear-gradient(to right, -fx-base-midDark 0%, -fx-base-mid 10%, -fx-base-midLight 50%, -fx-base-mid 90%, -fx-base-midDark 100%);
+}        */
+

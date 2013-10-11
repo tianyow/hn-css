@@ -1,0 +1,27 @@
+/***** Theme Colors *****/
+/* Winter */
+.hn-loginWrap {
+
+    -fx-base:            #F7B6C2;
+
+    -fx-base-ultraLight: #FEFAEB;
+    -fx-base-lighter:    #F7E1CD;
+    -fx-base-light:      #F7B6C2;
+    -fx-base-dark:       #FA90B1;
+    -fx-base-darker:     #C52D77;
+    -fx-base-ultraDark:  #72004E;
+}
+
+.hn-mainWrap {
+    -fx-base: rgb(255, 241, 243);
+
+    -fx-base-light:     rgb(255, 247, 244);
+    -fx-base-midLight:  rgb(255, 219, 214);
+    -fx-base-mid:       rgb(240, 180, 186);
+    -fx-base-midDark:   rgb(236, 125, 125);
+    -fx-base-dark:      rgb(204, 0, 69);
+    -fx-base-deepDark: rgb(153, 16, 47);
+
+    -fx-base-gradient: linear-gradient(to right, -fx-base-midDark 0%, -fx-base-mid 10%, -fx-base-midLight 50%, -fx-base-mid 90%, -fx-base-midDark 100%);
+}
+

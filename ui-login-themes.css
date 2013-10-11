@@ -1,0 +1,36 @@
+/***** Login Theme Colors *****/
+
+/* Spring */
+.hn-loginWrap {
+
+    -fx-base:            #9DF077;
+
+    -fx-base-ultraLight: #FEFAEB;
+    -fx-base-lighter:    #E8F0CD;
+    -fx-base-light:      #D2E69D;
+    -fx-base-dark:       #58ba0f;
+    -fx-base-darker:     #38950A;
+    -fx-base-ultraDark:  #005105;
+}
+
+/*  Summer  *
+
+*/
+
+/* Fall *
+
+*/
+
+/* Winter * /
+.hn-loginWrap {
+
+    -fx-base:            #F7B6C2;
+
+    -fx-base-ultraLight: #FEFAEB;
+    -fx-base-lighter:    #F7E1CD;
+    -fx-base-light:      #F7B6C2;
+    -fx-base-dark:       #FA90B1;
+    -fx-base-darker:     #C52D77;
+    -fx-base-ultraDark:  #72004E;
+}
+
