@@ -441,10 +441,15 @@
 /*** 05. TreeView and TreeCell ***/
 /* Treeview Area */
 .hn-treeview-wrap {
+    -fx-translate-x: 0;
+    -fx-background-color: linear-gradient(to right, #474747 95%, transparent 100%);
+    -fx-background-radius: 0 4 4 0;
+}
+.hn-treeview-wrap.hide {
     -fx-translate-x: -445;
     -fx-background-color: transparent;
 }
-.hn-treeview-wrap:hover {
+.hn-treeview-wrap.hide:hover {
     -fx-translate-x: 0;
     -fx-background-color: linear-gradient(to right, #474747 95%, transparent 100%);
     -fx-background-radius: 0 4 4 0;
