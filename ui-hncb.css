@@ -123,6 +123,7 @@
 10. StageTab
 11. Modals
 12. Report
+13. Splash
 
 *******************/
 
@@ -935,6 +936,27 @@
     -fx-font-family: MingLiU, monospace;
 }
 
+/*** 13. Splash ***/
+.hn-splash .button {
+    -fx-background-color: transparent, transparent, linear-gradient(to bottom, #66122d 0%, #793140 100%), linear-gradient(to bottom, #793140 0%, #66122d 100%);
+    -fx-font-size: 15;
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+    -fx-background-radius: 1;
+}
+.hn-splash .button:focused {
+    -fx-background-color: transparent, #d35078, linear-gradient(to bottom, #66122d 0%, #793140 100%), linear-gradient(to bottom, #793140 0%, #66122d 100%);
+}
+.hn-splash .button:focused:hover {}
+.hn-splash .button:hover {
+    -fx-background-color: transparent, #ff589c, linear-gradient(to bottom, #66122d 0%, #713138 100%), linear-gradient(to bottom, #a9435b 0%, #66122d 100%);
+}
+.hn-splash .button:focused:hover:pressed {
+    -fx-background-color: transparent, #bc456d, linear-gradient(to bottom, #66122d 0%, #793140 100%), linear-gradient(to bottom, #4a2325 0%, #66122d 50%);
+}
+.hn-splash .button:disabled {
+    -fx-opacity: 0;
+}
 /************************************************************************
 + ui-controls.css  (Global Styles)
 ************************************************************************/
