@@ -32,6 +32,7 @@
     /*-fx-font-family: "Microsoft JhengHei", Arial, monospace, sans-serif; PMingLiU*/
     -fx-font-family: Arial, monospace, sans-serif;
     -fx-font-smoothing-type: lcd;
+    -fx-font
     -fx-font-weight: bold;
     -fx-smooth: false;
     -fx-text-fill: black;
@@ -628,6 +629,8 @@
     -fx-border-width: 0;
     -fx-border-color: #aaaaaa;
     -fx-font-family: MingLiU, monospace;
+    -fx-font-size: 16;
+    -fx-font-smoothing-type: lcd;
 }
 /*** 07.ScrollBar ***/
 .scroll-bar{
@@ -996,7 +999,7 @@ d. ProgressIndicator
 
 /*** 02. TextField ***/
 .text-field {
-    -fx-padding: 3 5 3 5;
+    -fx-padding: 1 5 1 5;
     -fx-border-radius: 1;
     -fx-background-image: null;
     -fx-background-color: #999999, white, linear-gradient( white 0%, white 100%), linear-gradient(rgb(230,230,230) 0%, white 35%);
@@ -1109,12 +1112,12 @@ d. ProgressIndicator
 
 /*** 09. CheckBox ***/
 .check-box {
-    -fx-padding: 2 2 2 0;
+    -fx-padding: 1 2 1 0;
 }
 .check-box .box {
     -fx-background-color: transparent, #999999, linear-gradient( white 0%, white 100%), -fx-box-gradient;
     -fx-background-radius: 2;
-    -fx-padding: 5;
+    -fx-padding: 4 4 5 4;
     -fx-effect: dropshadow(one-pass-box, gray, 1, 1.0, 0, 1);
 }
 .check-box.hn-required .box {
@@ -1156,11 +1159,11 @@ d. ProgressIndicator
 }
 /*** 10. RadioButton ***/
 .radio-button {
-    -fx-padding: 3 3 3 0;
+    -fx-padding: 1;
 }
 .radio-button .radio {
     -fx-background-color:  transparent, #999999, linear-gradient( white 0%, white 100%), -fx-box-gradient;
-    -fx-padding: 4;
+    -fx-padding: 3;
     -fx-effect: dropshadow(one-pass-box, gray, 1, 1.0, 0, 1);
 }
 .radio-button.hn-required .radio {
@@ -1265,7 +1268,7 @@ d. ProgressIndicator
 .combo-box .list-cell {
     -fx-background: transparent;
     -fx-background-color: transparent;
-    -fx-padding: 3 0 3 7;
+    -fx-padding: 1 0 1 7;
 }
 .combo-box:showing .list-cell {
     -fx-text-fill: black;
@@ -1278,8 +1281,9 @@ d. ProgressIndicator
 /*** 13. ScrollPane ***/
 .scroll-pane {
     -fx-background-color: linear-gradient(#bbbbbb 0, #dddddd 10%), linear-gradient(derive(-fx-base-ultraLight, -5%) 0, -fx-base-ultraLight 10%, -fx-base-ultraLight 99%, rgba(100,100,100,0.2) 100%);
-
     -fx-font-family: MingLiU, monospace;
+    -fx-font-size: 16;
+    -fx-font-smoothing-type: lcd;
 }
 
 /*** 14. TabPane ***/
