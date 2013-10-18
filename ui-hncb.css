@@ -244,6 +244,9 @@
     -fx-background-color: -fx-base-gradient;
     -fx-background-radius: 0 0 10 10;
 }
+.hn-txnMsgWrap .label {
+    -fx-font-size: 15;
+}
 .hn-txnMsgWrapShadow {
     -fx-background-color: linear-gradient(to right, transparent 0, #000000 50%, transparent 100%);
 }
@@ -261,6 +264,9 @@
 .hn-txnZoom .text-field {
     -fx-background-color: transparent, linear-gradient(#cccccc 0%, white 50%);
     -fx-background-radius: 0;
+    -fx-padding: 4 3 4 3;
+    -fx-text-alignment: center;
+    -fx-effect: null;
 }
 .hn-txnZoom .hn-txnZoomDown {
     -fx-background-color: linear-gradient(-fx-base 0%, -fx-base-light 50%, -fx-base 100%);
@@ -277,11 +283,13 @@
 }
 .hn-systemInfo .label {
     -fx-text-fill: black;
+    -fx-font-size: 15;
 }
 .hn-datebox {
-    -fx-background-color: linear-gradient(to right, #999999 0%, #eeeeee 25%, #eeeeee 75%, #999999 100%);
+    -fx-background-color: linear-gradient(to right, #999999 0%, #eeeeee 20%, #eeeeee 80%, #999999 100%);
     -fx-background-insets: 0;
     -fx-background-radius: 3 3 0 0;
+    -fx-effect: innershadow(three-pass-box, #999999, 5, 0.2, 1, 1);
 }
 .hn-timebox {
     -fx-background-color: linear-gradient(to bottom, -fx-base 0%, -fx-base-lighter 40%, -fx-base-ultraLight 100%);
@@ -630,6 +638,8 @@
     -fx-font-family: MingLiU, monospace;
     -fx-font-size: 16;
     -fx-font-smoothing-type: lcd;
+    -fx-font-weight: bold;
+    -fx-text-fill: #000000;
 }
 /*** 07.ScrollBar ***/
 .scroll-bar{
@@ -1289,6 +1299,8 @@ d. ProgressIndicator
     -fx-font-family: MingLiU, monospace;
     -fx-font-size: 16;
     -fx-font-smoothing-type: lcd;
+    -fx-font-weight: bold;
+    -fx-text-fill: #000000;
 }
 
 /*** 14. TabPane ***/
@@ -1312,6 +1324,7 @@ d. ProgressIndicator
 }
 .tab:top .tab-label {
     -fx-text-fill: #bababa;
+    -fx-alignment: center;
 }
 .tab:top:hover {
     -fx-background-color: linear-gradient(derive(#666666,10%) 70%, derive(#333333,20%) 100%);
