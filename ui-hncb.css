@@ -57,7 +57,7 @@
         -fx-mid-text-color   60%
     );
 
-    -fx-box-gradient: linear-gradient( white 0%, rgb(225,225,225) 15%, rgb(245, 245, 245) 80%, rgb(246, 246, 246) 100%);
+    -fx-box-gradient: linear-gradient( white 0%, rgb(225,225,225) 40%, rgb(245, 245, 245) 80%, rgb(246, 246, 246) 100%);
 
     -fx-box-border: ladder(
         -fx-color,
@@ -1113,6 +1113,9 @@ d. ProgressIndicator
 .check-box {
     -fx-padding: 1 2 1 0;
 }
+.check-box .text {
+    -fx-translate-y: 2;
+}
 .check-box .box {
     -fx-background-color: transparent, #999999, linear-gradient( white 0%, white 100%), -fx-box-gradient;
     -fx-background-radius: 2;
@@ -1158,11 +1161,14 @@ d. ProgressIndicator
 }
 /*** 10. RadioButton ***/
 .radio-button {
-    -fx-padding: 1;
+    -fx-padding: 1 0 1 0;
+}
+.radio-button .text {
+    -fx-translate-y: 2;
 }
 .radio-button .radio {
     -fx-background-color:  transparent, #999999, linear-gradient( white 0%, white 100%), -fx-box-gradient;
-    -fx-padding: 3;
+    -fx-padding: 4;
     -fx-effect: dropshadow(one-pass-box, gray, 1, 1.0, 0, 1);
 }
 .radio-button.hn-required .radio {
@@ -1267,7 +1273,7 @@ d. ProgressIndicator
 .combo-box .list-cell {
     -fx-background: transparent;
     -fx-background-color: transparent;
-    -fx-padding: 1 0 1 7;
+    -fx-padding: 2 0 0 7;
 }
 .combo-box:showing .list-cell {
     -fx-text-fill: black;
