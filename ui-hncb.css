@@ -376,6 +376,9 @@
      -fx-background-radius: 0;
      -fx-padding: 4 1 8 1;   */
 }
+.hn-menuBar .context-menu {
+    -fx-font-size: 21 !important;
+}
 
 /*** 03. MenuItem ***/
 
@@ -646,7 +649,7 @@
     -fx-border-color: #aaaaaa;
     -fx-font-family: MingLiU, monospace;
     -fx-font-size: 16;
-    -fx-font-smoothing-type: lcd;
+    -fx-font-smoothing-type: gray;
     -fx-font-weight: bold;
     -fx-text-fill: #000000;
 }
@@ -1307,8 +1310,8 @@ d. ProgressIndicator
     -fx-background-color: linear-gradient(#bbbbbb 0, #dddddd 10%), linear-gradient(derive(-fx-base-ultraLight, -5%) 0, -fx-base-ultraLight 10%, -fx-base-ultraLight 99%, rgba(100,100,100,0.2) 100%);
     -fx-font-family: MingLiU, monospace;
     -fx-font-size: 16;
-    -fx-font-smoothing-type: lcd;
-    -fx-font-weight: bold;
+    -fx-font-smoothing-type: gray;
+    -fx-font-weight: bolder;
     -fx-text-fill: #000000;
 }
 
