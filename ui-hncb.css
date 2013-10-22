@@ -1044,6 +1044,23 @@ d. ProgressIndicator
 }
 
 /*** 05. TableView ***/
+.table-view {}
+.table-view:focused {}
+.table-row-cell {}
+.table-row-cell:odd {}
+.table-view .column-header, .table-view .filler {
+    -fx-font-size: 16;
+}
+.table-view .show-hide-columns-button {
+}
+.table-view .column-drag-header {
+}
+.table-view .column-resize-line {
+}
+.table-view .column-overlay {
+}
+.table-view .arrow {
+}
 
 /*** 06. Pagination ***/
 .pagination {
