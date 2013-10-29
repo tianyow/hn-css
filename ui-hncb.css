@@ -991,7 +991,7 @@
 /*** 13. Loading ***/
 .hn-loading {
     -fx-font-size: 15;
-    -fx-background-color: black;
+    -fx-background-color: #312322;
     -fx-background-radius: 15;
 }
 .hn-loading .label {
@@ -1002,7 +1002,7 @@
     -fx-background-radius: 9;
 }
 .hn-loading-seconds .label {
-    -fx-text-fill: black;
+    -fx-text-fill: #312322;
 }
 
 /************************************************************************
