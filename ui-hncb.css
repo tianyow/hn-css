@@ -28,7 +28,7 @@
     /**********************
         Fonts
     **********************/
-    -fx-font-size: 14;
+    -fx-font-size: 15;
     /*-fx-font-family: "Microsoft JhengHei", Arial, monospace, sans-serif; PMingLiU*/
     -fx-font-family: Arial, monospace, sans-serif;
     -fx-font-smoothing-type: lcd;
@@ -124,6 +124,7 @@
 11. Modals
 12. Report
 13. Splash
+14. Loading
 
 *******************/
 
@@ -139,10 +140,6 @@
 }
 .hn-windowWrap {
     -fx-background-color: radial-gradient(center 50% 10%, radius 100%, #ffffff 20%, #cacaca 100%);
-}
-.hn-loading .label {
-    -fx-font-size: 15;
-    -fx-text-fill: darkred;
 }
 /* TopBar Area */
 .hn-topbar {
@@ -208,8 +205,8 @@
     -fx-effect: dropshadow(three-pass-box, #999999, 5, 0.5, 0, 2);
 }
 .hn-txnName {
-    -fx-font-size: 1.15em;
-    -fx-font-weight: bold;
+    -fx-font-size: 18;
+    -fx-font-weight: bolder;
 }
 .hn-txnQuickInput {
     -fx-background-color: linear-gradient(-fx-base-sub1 0, -fx-base-sub3 50%, -fx-base-sub2 100%);
@@ -350,6 +347,9 @@
 /*** 01. MenuBar ***/
 .hn-menuBar {
     -fx-background-color: transparent;
+}
+.hn-menuBar .menu-item .text {
+    -fx-font-size: 15;
 }
 
 /*** 02. Menu ***/
@@ -988,6 +988,23 @@
 .hn-splash .button:disabled {
     -fx-opacity: 0;
 }
+/*** 13. Loading ***/
+.hn-loading {
+    -fx-font-size: 15;
+    -fx-background-color: black;
+    -fx-background-radius: 15;
+}
+.hn-loading .label {
+    -fx-text-fill: white;
+}
+.hn-loading-seconds {
+    -fx-background-color: #ffbaca;
+    -fx-background-radius: 9;
+}
+.hn-loading-seconds .label {
+    -fx-text-fill: black;
+}
+
 /************************************************************************
 + ui-controls.css  (Global Styles)
 ************************************************************************/
