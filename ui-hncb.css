@@ -1084,7 +1084,7 @@ d. ProgressIndicator
     -fx-padding: 0;
     -fx-arrows-visible: true;
     -fx-tooltip-visible: false;
-    -fx-page-information-visible: true;
+    -fx-page-information-visible: false;
     -fx-page-information-alignment: top;
     -fx-max-page-indicator-count: 10;
     -fx-font-family: Arial;
