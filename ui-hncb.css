@@ -125,7 +125,7 @@
 12. Report
 13. Splash
 14. Loading
-
+15. Authority
 *******************/
 /*** 00. Container & Elements ***/
 
@@ -354,7 +354,7 @@
 /*** 02. Menu ***/
 .hn-menuBar .menu {
     -fx-background-color: transparent;
-    -fx-padding: 1 0 0 1;
+    -fx-padding: 0 0 0 1;
 }
 .hn-menuBar .menu-button .label {
     -fx-text-fill: white;
@@ -365,7 +365,7 @@
 .hn-menuBar .menu:hover {
     -fx-background-color: linear-gradient(#333333 0%, #444444 80%);
     -fx-background-insets: 1 0 0 0;
-    -fx-background-radius: 2 2 0 0;
+    -fx-background-radius: 3 3 0 0;
 }
 .hn-menuBar .menu .context-menu {
     /* -fx-skin: "com.sun.javafx.scene.control.skin.ContextMenuSkin";
@@ -987,21 +987,37 @@
 .hn-splash .button:disabled {
     -fx-opacity: 0;
 }
-/*** 13. Loading ***/
+/*** 14. Loading ***/
 .hn-loading {
     -fx-font-size: 15;
-    -fx-background-color: #312322;
+    -fx-background-color: rgba(0, 0, 0, 0.1);
     -fx-background-radius: 15;
 }
 .hn-loading .label {
     -fx-text-fill: white;
+    -fx-font-size: 24;
 }
 .hn-loading-seconds {
     -fx-background-color: #ffbaca;
     -fx-background-radius: 9;
+    -fx-font-size: 20;
 }
 .hn-loading-seconds .label {
     -fx-text-fill: #312322;
+}
+/*** 15. Authority ***/
+.hn-authority {
+    -fx-background-color: linear-gradient(#232b4d 0, #232b6d 100%);
+    -fx-border-color: #d2145a;
+    -fx-border-width: 0 10 0 0;
+    -fx-effect: dropshadow(three-pass-box, #666666, 5, 0.7, 0, 1);
+}
+.hn-authority .label {
+    -fx-text-fill: white;
+}
+.hn-authority-title {
+    -fx-background-color: #d2145a;
+
 }
 
 /************************************************************************
