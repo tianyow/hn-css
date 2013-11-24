@@ -1007,17 +1007,16 @@
 }
 /*** 15. Authority ***/
 .hn-authority {
-    -fx-background-color: linear-gradient(#232b4d 0, #232b6d 100%);
-    -fx-border-color: #d2145a;
-    -fx-border-width: 0 10 0 0;
-    -fx-effect: dropshadow(three-pass-box, #666666, 5, 0.7, 0, 1);
+    -fx-background-color: linear-gradient(#232b4d 0, #232b5d 100%);
+    -fx-border-color: #0066ab;
+    -fx-border-width: 0 0 3 0;
+    -fx-effect: dropshadow(three-pass-box, #666666, 5, 0.3, 0, 1);
 }
 .hn-authority .label {
     -fx-text-fill: white;
 }
 .hn-authority-title {
     -fx-background-color: #d2145a;
-
 }
 
 /************************************************************************
