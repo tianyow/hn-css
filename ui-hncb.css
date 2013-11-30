@@ -651,6 +651,12 @@
     -fx-font-weight: bold;
     -fx-text-fill: #000000;
 }
+    /** Font-stroke-test **/
+    .hn-tab-scrollpane > .scroll-pane .label > .text {
+        -fx-stroke-type: centered;
+        -fx-stroke: black;
+        -fx-stroke-width: 0.5;
+    }
 /*** 07.ScrollBar ***/
 .scroll-bar{
     -fx-background-color: transparent;
