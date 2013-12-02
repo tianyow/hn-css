@@ -214,7 +214,7 @@
 }
 .hn-txnName > .text {
     -fx-stroke: black;
-    -fx-stroke-width: 0.2;
+    -fx-stroke-width: 0.1;
 }
 .hn-txnQuickInput {
     -fx-background-color: linear-gradient(-fx-base-sub1 0, -fx-base-sub3 50%, -fx-base-sub2 100%);
