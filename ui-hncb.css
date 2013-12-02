@@ -212,6 +212,10 @@
     -fx-font-size: 18;
     -fx-font-weight: bolder;
 }
+.hn-txnName > .text {
+    -fx-stroke: black;
+    -fx-stroke-width: 0.2;
+}
 .hn-txnQuickInput {
     -fx-background-color: linear-gradient(-fx-base-sub1 0, -fx-base-sub3 50%, -fx-base-sub2 100%);
     -fx-background-radius: 6 0 0 6;
