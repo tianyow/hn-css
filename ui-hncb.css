@@ -1098,8 +1098,8 @@ d. ProgressIndicator
     -fx-border-radius: 1;
     -fx-background-image: null;
     -fx-background-color: #999999, white, linear-gradient( white 0%, white 100%), linear-gradient(rgb(230,230,230) 0%, white 35%);
-    -fx-highlight-fill: -fx-focus-color;
-    -fx-highlight-text-fill: white;
+    -fx-highlight-fill: #c2c2c2;
+    -fx-highlight-text-fill: black;
     -fx-effect: dropshadow(one-pass-box, gray, 1, 1.0, 0, 1);
 }
 .text-field .text {
@@ -1114,7 +1114,7 @@ d. ProgressIndicator
 .text-field.hn-required:focused {
     -fx-background-color: -fx-focus-color, #cccccc, linear-gradient( white 0%, white 100%), -fx-focus-gradient;
 }
-.text-field:disabled {
+.text-field:disabled, .text-field:disabled.hn-required {
     -fx-background-color: #999999, #eeeeee, linear-gradient( white 0%, white 100%), linear-gradient(rgb(204,204,204) 0%, rgb(204,204,204) 100%);
 }
 .text-field.error {
@@ -1136,8 +1136,9 @@ d. ProgressIndicator
 /* Selected row */
 .table-view:focused .table-row-cell:filled:focused:selected {
     -fx-background-color: -fx-base-light;
+    -fx-text-fill: black;
 }
-.table-view:focused .table-row-cell:filled:focused:selected .table-cell {
+.table-view:focused .table-row-cell:filled:selected .table-cell {
     -fx-text-fill: black;
 }
 /* Selected row when table not focused */
