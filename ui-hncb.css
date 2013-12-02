@@ -655,7 +655,7 @@
     .hn-tab-scrollpane > .scroll-pane .label > .text {
         -fx-stroke-type: centered;
         -fx-stroke: black;
-        -fx-stroke-width: 0.5;
+        -fx-stroke-width: 0.2;
     }
 /*** 07.ScrollBar ***/
 .scroll-bar{
