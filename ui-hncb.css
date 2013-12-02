@@ -352,7 +352,7 @@
     -fx-text-fill: -fx-error-base !important;
     /* font color darken */
     -fx-stroke: -fx-error-base !important;
-    -fx-stroke-width: 0.2;
+    -fx-stroke-width: 0.1;
 }
 
 /*** 01. MenuBar ***/
@@ -372,7 +372,7 @@
     -fx-text-fill: white;
     /* font color darken */
     -fx-stroke: white;
-    -fx-stroke-width: 0.2;
+    -fx-stroke-width: 0.1;
 }
 .hn-menuBar .menu-button:hover,
 .hn-menuBar .menu-button:focused,
@@ -406,7 +406,7 @@
     -fx-text-fill: white;
     /* font color darken */
     -fx-stroke: white;
-    -fx-stroke-width: 0.2;
+    -fx-stroke-width: 0.1;
 }
 .hn-tabPane > .tab-pane *.tab-header-background {
     -fx-background-color: transparent;
@@ -442,7 +442,7 @@
     -fx-font-weight: bold;
     /* font color darken */
     -fx-stroke: black;
-    -fx-stroke-width: 0.2;
+    -fx-stroke-width: 0.1;
 }
 .hn-tabPane > .tab-pane .tab-close-button {
     -fx-background-color: -fx-mark-color;
@@ -509,7 +509,7 @@
     -fx-text-fill: white;
     /* font color darken */
     -fx-stroke: white;
-    -fx-stroke-width: 0.2;
+    -fx-stroke-width: 0.1;
 }
 .hn-treeview-wrap .tab-pane *.tab-header-background {
     -fx-background-color: transparent;
@@ -679,7 +679,7 @@
     .hn-tab-scrollpane > .scroll-pane .label > .text {
         /* font color darken */
         -fx-stroke: black;
-        -fx-stroke-width: 0.2;
+        -fx-stroke-width: 0.1;
     }
 /*** 07.ScrollBar ***/
 .scroll-bar{
@@ -831,7 +831,7 @@
 }
 .button > .text {
     -fx-stroke: black;
-    -fx-stroke-width: 0.2;
+    -fx-stroke-width: 0.1;
 }
 .button:focused {
     -fx-background-color: -fx-focus-color, -fx-base-darker, linear-gradient(to bottom,rgb(199,199,199) 0%,rgb(180,182,187) 100%), linear-gradient(to bottom,-fx-base-ultraLight 0%,-fx-base 75%,-fx-base-light 100%);
@@ -934,7 +934,7 @@
     -fx-effect: dropshadow(gaussian, #ffffff, 10, 0.3, 0, 0);
     /* font color darken */
     -fx-stroke: white;
-    -fx-stroke-width: 0.2;
+    -fx-stroke-width: 0.1;
 }
 .hn-Modal .hn-Modal-title-shadow {
     -fx-background-color: linear-gradient(to right, transparent 0, #333333 50%, transparent 100%);
@@ -1012,7 +1012,7 @@
     -fx-background-radius: 1;
     /* font color darken */
     -fx-stroke: white;
-    -fx-stroke-width: 0.2;
+    -fx-stroke-width: 0.1;
 }
 .hn-splash .button:focused {
     -fx-background-color: transparent, #d35078, linear-gradient(to bottom, #66122d 0%, #793140 100%), linear-gradient(to bottom, #793140 0%, #66122d 100%);
@@ -1038,7 +1038,7 @@
     -fx-font-size: 24;
     /* font color darken */
     -fx-stroke: white;
-    -fx-stroke-width: 0.2;
+    -fx-stroke-width: 0.1;
 }
 .hn-loading-seconds {
     -fx-background-color: #ffbaca;
@@ -1105,7 +1105,7 @@ d. ProgressIndicator
 .text-field .text {
     /* font color darken */
     -fx-stroke: black;
-    -fx-stroke-width: 0.2;
+    -fx-stroke-width: 0.1;
 }
 .text-field.hn-required {
     -fx-background-color: #999999, white, linear-gradient( white 0%, white 100%), -fx-required-gradient;
@@ -1124,7 +1124,7 @@ d. ProgressIndicator
 .text-field.error .text {
     /* font color darken */
     -fx-stroke: red;
-    -fx-stroke-width: 0.2;
+    -fx-stroke-width: 0.1;
 }
 
 /*** 05. TableView ***/
@@ -1216,7 +1216,7 @@ d. ProgressIndicator
 }
 .button > .text {
     -fx-stroke: black;
-    -fx-stroke-width: 0.2;
+    -fx-stroke-width: 0.1;
 }
 .button:focused {
 }
@@ -1243,7 +1243,7 @@ d. ProgressIndicator
 .check-box .text {
     -fx-translate-y: 2;
     -fx-stroke: black;
-    -fx-stroke-width: 0.2;
+    -fx-stroke-width: 0.1;
 }
 .check-box .box {
     -fx-background-color: transparent, #999999, linear-gradient( white 0%, white 100%), -fx-box-gradient;
@@ -1295,7 +1295,7 @@ d. ProgressIndicator
 .radio-button .text {
     -fx-translate-y: 2;
     -fx-stroke: black;
-    -fx-stroke-width: 0.2;
+    -fx-stroke-width: 0.1;
 }
 .radio-button .radio {
     -fx-background-color:  transparent, #999999, linear-gradient( white 0%, white 100%), -fx-box-gradient;
@@ -1411,7 +1411,7 @@ d. ProgressIndicator
 }
 .combo-box .list-cell > .text {
     -fx-stroke: black;
-    -fx-stroke-width: 0.2;
+    -fx-stroke-width: 0.1;
 }
 .combo-box-popup .list-view {
     -fx-background-color: rgb(76,81,86),rgb(228,233,238);
@@ -1453,7 +1453,7 @@ d. ProgressIndicator
 }
 .tab:top .tab-label > .text {
     -fx-stroke: #bababa;
-    -fx-stroke-width: 0.2;
+    -fx-stroke-width: 0.1;
 }
 .tab:top:hover {
     -fx-background-color: linear-gradient(derive(#666666,10%) 70%, derive(#333333,20%) 100%);
@@ -1466,7 +1466,7 @@ d. ProgressIndicator
 }
 .tab:selected .tab-label > .text {
     -fx-stroke: black;
-    -fx-stroke-width: 0.2;
+    -fx-stroke-width: 0.1;
 }
 .tab-close-button {
     -fx-background-color: -fx-mark-color;
