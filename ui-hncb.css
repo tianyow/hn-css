@@ -401,7 +401,7 @@
     -fx-background-color: transparent;
 }
 .hn-tabPane > .tab-pane .tab-label {
-    -fx-font-size: 14;
+    -fx-font-size: 16;
     -fx-padding: 0 6 0 0;
     -fx-text-fill: white;
     /* font color darken */
@@ -1128,34 +1128,36 @@ d. ProgressIndicator
 }
 
 /*** 05. TableView ***/
-.table-view {}
-.table-view:focused {}
-.table-cell .text {
+.table-view .table-row-cell, .table-view:focused .table-row-cell {
     -fx-text-fill: black;
+    -fx-selection-bar: -fx-base-light;
+    -fx-selection-bar-text: black;
 }
 /* Selected row */
 .table-view:focused .table-row-cell:filled:focused:selected {
     -fx-background-color: -fx-base-light;
     -fx-text-fill: black;
-}
-.table-view:focused .table-row-cell:filled:selected .table-cell {
-    -fx-text-fill: black;
+    -fx-selection-bar: -fx-base-light;
+    -fx-selection-bar-text: black;
 }
 /* Selected row when table not focused */
-.table-row-cell:filled:focused:selected {
+.table-view .table-row-cell:filled:focused:selected {
     -fx-background-color: -fx-base-light;
 }
 /* Row hovered */
 .table-view:row-selection .table-row-cell:filled:hover {
     -fx-background-color: -fx-base-lighter;
+    -fx-text-fill: black;
 }
 /* Selected row hovered */
 .table-view:focused .table-row-cell:filled:focused:selected:hover {
     -fx-background-color: -fx-base-lighter;
+    -fx-text-fill: black;
 }
 /* Selected row hovered when table not focused */
 .table-view:row-selection .table-row-cell:filled:focused:hover {
     -fx-background-color: -fx-base-lighter;
+    -fx-text-fill: black;
 }
 .table-row-cell:odd {}
 .table-view .column-header, .table-view .filler {
@@ -1171,7 +1173,6 @@ d. ProgressIndicator
 }
 .table-view .arrow {
 }
-
 /*** 06. Pagination ***/
 .pagination {
     -fx-padding: 0;
