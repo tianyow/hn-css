@@ -132,11 +132,6 @@
 .hn-mainWrap {
     -fx-background-color: radial-gradient(center 50% 10%, radius 70%, #505d6e 20%, #111111 100%);
 }
-.hn-mainWrap .text {
-    /* font color darken
-    -fx-stroke: black;: ;
-    -fx-stroke-width: 0.2;*/
-}
 .hn-mainWrapOverlay {
     /*-fx-background-image: url("../images/ptn-01.jpg");
     -fx-background-repeat: repeat;
@@ -214,7 +209,7 @@
 }
 .hn-txnName > .text {
     -fx-stroke: black;
-    -fx-stroke-width: 0.1;
+    -fx-stroke-width: 0.2;
 }
 .hn-txnQuickInput {
     -fx-background-color: linear-gradient(-fx-base-sub1 0, -fx-base-sub3 50%, -fx-base-sub2 100%);
@@ -370,9 +365,6 @@
 }
 .hn-menuBar .menu-button .label {
     -fx-text-fill: white;
-    /* font color darken */
-    -fx-stroke: white;
-    -fx-stroke-width: 0.1;
 }
 .hn-menuBar .menu-button:hover,
 .hn-menuBar .menu-button:focused,
@@ -404,9 +396,6 @@
     -fx-font-size: 16;
     -fx-padding: 0 6 0 0;
     -fx-text-fill: white;
-    /* font color darken */
-    -fx-stroke: white;
-    -fx-stroke-width: 0.1;
 }
 .hn-tabPane > .tab-pane *.tab-header-background {
     -fx-background-color: transparent;
@@ -440,9 +429,6 @@
 .hn-tabPane > .tab-pane .tab:selected .tab-label {
     -fx-text-fill: black;
     -fx-font-weight: bold;
-    /* font color darken */
-    -fx-stroke: black;
-    -fx-stroke-width: 0.1;
 }
 .hn-tabPane > .tab-pane .tab-close-button {
     -fx-background-color: -fx-mark-color;
@@ -507,9 +493,6 @@
 .hn-treeview-wrap .tab-pane .tab-label {
     -fx-padding: 0;
     -fx-text-fill: white;
-    /* font color darken */
-    -fx-stroke: white;
-    -fx-stroke-width: 0.1;
 }
 .hn-treeview-wrap .tab-pane *.tab-header-background {
     -fx-background-color: transparent;
@@ -675,12 +658,6 @@
     -fx-font-weight: bold;
     -fx-text-fill: black;
 }
-    /** Font-stroke-test **/
-    .hn-tab-scrollpane > .scroll-pane .label > .text {
-        /* font color darken */
-        -fx-stroke: black;
-        -fx-stroke-width: 0.1;
-    }
 /*** 07.ScrollBar ***/
 .scroll-bar{
     -fx-background-color: transparent;
@@ -828,10 +805,6 @@
     -fx-background-insets: 0,1,2,3;
     -fx-background-radius: 3;
     -fx-padding: 4 15 5 15;
-}
-.button > .text {
-    -fx-stroke: black;
-    -fx-stroke-width: 0.1;
 }
 .button:focused {
     -fx-background-color: -fx-focus-color, -fx-base-darker, linear-gradient(to bottom,rgb(199,199,199) 0%,rgb(180,182,187) 100%), linear-gradient(to bottom,-fx-base-ultraLight 0%,-fx-base 75%,-fx-base-light 100%);
@@ -1010,9 +983,6 @@
     -fx-text-fill: white;
     -fx-cursor: hand;
     -fx-background-radius: 1;
-    /* font color darken */
-    -fx-stroke: white;
-    -fx-stroke-width: 0.1;
 }
 .hn-splash .button:focused {
     -fx-background-color: transparent, #d35078, linear-gradient(to bottom, #66122d 0%, #793140 100%), linear-gradient(to bottom, #793140 0%, #66122d 100%);
@@ -1036,9 +1006,6 @@
 .hn-loading .label {
     -fx-text-fill: white;
     -fx-font-size: 24;
-    /* font color darken */
-    -fx-stroke: white;
-    -fx-stroke-width: 0.1;
 }
 .hn-loading-seconds {
     -fx-background-color: #ffbaca;
@@ -1102,11 +1069,6 @@ d. ProgressIndicator
     -fx-highlight-text-fill: black;
     -fx-effect: dropshadow(one-pass-box, gray, 1, 1.0, 0, 1);
 }
-.text-field .text {
-    /* font color darken */
-    -fx-stroke: black;
-    -fx-stroke-width: 0.1;
-}
 .text-field.hn-required {
     -fx-background-color: #999999, white, linear-gradient( white 0%, white 100%), -fx-required-gradient;
 }
@@ -1121,12 +1083,6 @@ d. ProgressIndicator
     -fx-background-color: -fx-error-base, white, transparent, -fx-error-gradient;
     -fx-text-fill: derive(-fx-error-base, -10%);
 }
-.text-field.error .text {
-    /* font color darken */
-    -fx-stroke: red;
-    -fx-stroke-width: 0.1;
-}
-
 /*** 05. TableView ***/
 .table-view .table-row-cell, .table-view:focused .table-row-cell {
     -fx-text-fill: black;
@@ -1241,10 +1197,6 @@ d. ProgressIndicator
 /*** 07. Button ***/
 .button {
 }
-.button > .text {
-    -fx-stroke: black;
-    -fx-stroke-width: 0.1;
-}
 .button:focused {
 }
 .button:focused:hover {
@@ -1269,8 +1221,6 @@ d. ProgressIndicator
 }
 .check-box .text {
     -fx-translate-y: 2;
-    -fx-stroke: black;
-    -fx-stroke-width: 0.1;
 }
 .check-box .box {
     -fx-background-color: transparent, #999999, linear-gradient( white 0%, white 100%), -fx-box-gradient;
@@ -1321,8 +1271,6 @@ d. ProgressIndicator
 }
 .radio-button .text {
     -fx-translate-y: 2;
-    -fx-stroke: black;
-    -fx-stroke-width: 0.1;
 }
 .radio-button .radio {
     -fx-background-color:  transparent, #999999, linear-gradient( white 0%, white 100%), -fx-box-gradient;
@@ -1436,10 +1384,6 @@ d. ProgressIndicator
 .combo-box:showing .list-cell {
     -fx-text-fill: black;
 }
-.combo-box .list-cell > .text {
-    -fx-stroke: black;
-    -fx-stroke-width: 0.1;
-}
 .combo-box-popup .list-view {
     -fx-background-color: rgb(76,81,86),rgb(228,233,238);
     -fx-background-insets: 0,1;
@@ -1478,10 +1422,6 @@ d. ProgressIndicator
     -fx-text-fill: #bababa;
     -fx-alignment: center;
 }
-.tab:top .tab-label > .text {
-    -fx-stroke: #bababa;
-    -fx-stroke-width: 0.1;
-}
 .tab:top:hover {
     -fx-background-color: linear-gradient(derive(#666666,10%) 70%, derive(#333333,20%) 100%);
 }
@@ -1490,10 +1430,6 @@ d. ProgressIndicator
 }
 .tab:selected .tab-label {
     -fx-text-fill: #000000;
-}
-.tab:selected .tab-label > .text {
-    -fx-stroke: black;
-    -fx-stroke-width: 0.1;
 }
 .tab-close-button {
     -fx-background-color: -fx-mark-color;
