@@ -71,10 +71,10 @@
         derive(-fx-background, -15%) 30%
     );
     /* Window Control */
-    -fx-minimize-color1: #222222;
-    -fx-minimize-color2: #777777;
-    -fx-logout-color1: #b80900;
-    -fx-logout-color2: #FF0000;
+    -fx-minimize-color1: #4a0302;
+    -fx-minimize-color2: #771c1d;
+    -fx-logout-color1: #fe7265;
+    -fx-logout-color2: #dd0000;
 
     /* States - Error */
     -fx-error-color1: #e10000;
@@ -161,9 +161,9 @@
     -fx-text-fill: white;
 }
 .hn-userinfo {
-    -fx-background-radius: 0 0 3 3;
+    -fx-background-radius: 0 0 0 0;
     -fx-translate-y: 0;
-    -fx-effect: innershadow(three-pass-box, #664948, 5, 0.5, 0, 0)
+    -fx-effect: innershadow(three-pass-box, #664948, 5, 0.5, 0, 0);
 }
 .hn-userinfo:hover {
     -fx-translate-y: 203;
@@ -173,12 +173,13 @@
     -fx-background-color: linear-gradient(to bottom, #f2cfcd 0%, #ffe8ea 55%);
 }
 .hn-userinfo .hn-userinfo-inline {
-    -fx-background-color: linear-gradient(to bottom, #e192a7 0%, #ffbbc2 40%, #ffe1ed 100%);
-    -fx-background-radius: 0 0 3 3;
+    -fx-background-color: linear-gradient(to bottom, #d16f7d 0%, #ffaeb0 40%, #ffe1ed 100%);
+    -fx-background-radius: 0 0 0 0;
+    -fx-effect: null;
 }
 .hn-userinfoBkg {
     -fx-background-color: linear-gradient(to bottom, #111111 0%, #cccccc 100%);
-    -fx-background-radius: 0 0 4 4;
+    -fx-background-radius: 0 0 0 0;
     -fx-opacity: 0.5;
 }
 .hn-userinfo .label {
@@ -196,7 +197,51 @@
 .hn-broadCast {
     -fx-background-color: linear-gradient(to right, derive(-fx-base-sub4, -35%) 0%, -fx-base-sub4 20%, -fx-base-sub4 85%, derive(-fx-base-sub4, -35%) 100%);
 }
-
+.hn-datebox {
+    -fx-background-color: rgba(25,25,25,0.8);
+    -fx-background-insets: 0;
+    -fx-background-radius: 0 0 0 0;
+    -fx-effect: innershadow(three-pass-box, #555555, 4, 0.5, 0, 0);
+}
+.hn-datebox > .label {
+    -fx-font-size: 13;
+    -fx-text-fill: white;
+}
+.hn-timebox {
+    -fx-background-color: linear-gradient(#cccccc 0, #eeeeee 85%);
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+}
+.hn-timebox > .label {
+    -fx-text-fill: #555555;
+}
+/** Login Window Control Buttons **/
+.hn-minimize.button {
+    -fx-background-color: linear-gradient(-fx-minimize-color1 0, -fx-minimize-color2 100%);
+    -fx-background-radius: 0 0 0 0;
+    -fx-background-insets: -3 0 -1 0;
+    -fx-cursor: hand;
+}
+.hn-minimize.button:focused {
+    -fx-background-color: linear-gradient(to bottom, derive(-fx-minimize-color1, 10%) 0%, derive(-fx-minimize-color2, 30%) 100%);
+}
+.hn-minimize.button:hover:pressed,
+.hn-minimize.button:armed {
+    -fx-background-color: linear-gradient(to bottom, derive(-fx-minimize-color1, -50%) 0%, derive(-fx-minimize-color2, -30%) 100%);
+}
+.hn-logout.button {
+    -fx-background-color: linear-gradient(-fx-logout-color1 0, -fx-logout-color2 100%);
+    -fx-background-radius: 0 0 0 0;
+    -fx-background-insets: -3 0 -1 0;
+    -fx-cursor: hand;
+}
+.hn-logout.button:focused {
+    -fx-background-color: linear-gradient(to bottom, derive(-fx-logout-color1, 10%) 0%, derive(-fx-logout-color2, 30%) 100%);
+}
+.hn-logout.button:hover:pressed,
+.hn-logout.button:armed {
+    -fx-background-color: linear-gradient(to bottom, derive(-fx-logout-color1, -50%) 0%, derive(-fx-logout-color2, -30%) 100%);
+}
 /* TxnContent Area */
 .hn-txnNameWrap {
     -fx-background-color: -fx-base-gradient;
@@ -291,55 +336,14 @@
     -fx-text-fill: black;
     -fx-font-size: 15;
 }
-.hn-datebox {
+.hn-serverUrlWrap {
     -fx-background-color: linear-gradient(to right, #999999 0%, #eeeeee 20%, #eeeeee 80%, #999999 100%);
     -fx-background-insets: 0;
-    -fx-background-radius: 3 3 0 0;
+    -fx-background-radius: 2 2 0 0;
     -fx-effect: innershadow(three-pass-box, #999999, 5, 0.2, 1, 1);
 }
 .hn-serverUrl .label {
     -fx-text-fill: #006495;
-}
-.hn-timebox {
-    -fx-background-color: linear-gradient(to bottom, -fx-base 0%, -fx-base-lighter 40%, -fx-base-ultraLight 100%);
-    -fx-background-insets: -1 -3 -1 -3;
-    -fx-background-radius: 2;
-}
-/** Login Window Control Buttons **/
-
-.hn-minimize.button {
-    -fx-background-color: linear-gradient(-fx-minimize-color1 0, -fx-minimize-color2 100%);
-    -fx-background-radius: 3 0 0 0;
-    -fx-border-width: 0 0 3 0;
-    -fx-border-color: -fx-minimize-color1;
-    -fx-cursor: hand;
-}
-.hn-minimize.button:focused {
-    -fx-background-color: linear-gradient(to bottom, derive(-fx-minimize-color1, 10%) 0%, derive(-fx-minimize-color2, 30%) 100%);
-    -fx-background-insets: 0;
-}
-.hn-minimize.button:hover:pressed,
-.hn-minimize.button:armed {
-    -fx-background-color: linear-gradient(to bottom, derive(-fx-minimize-color1, -50%) 0%, derive(-fx-minimize-color2, -30%) 100%);
-    -fx-background-insets: 0;
-    -fx-padding: 1 0 0 0;
-}
-.hn-logout.button {
-    -fx-background-color: linear-gradient(-fx-logout-color1 0, -fx-logout-color2 100%);
-    -fx-background-radius: 0 3 0 0;
-    -fx-border-width: 0 0 3 0;
-    -fx-border-color: -fx-logout-color1;
-    -fx-cursor: hand;
-}
-.hn-logout.button:focused {
-    -fx-background-color: linear-gradient(to bottom, derive(-fx-logout-color1, 10%) 0%, derive(-fx-logout-color2, 30%) 100%);
-    -fx-background-insets: 0;
-}
-.hn-logout.button:hover:pressed,
-.hn-logout.button:armed {
-    -fx-background-color: linear-gradient(to bottom, derive(-fx-logout-color1, -50%) 0%, derive(-fx-logout-color2, -30%) 100%);
-    -fx-background-insets: 0;
-    -fx-padding: 1 0 0 0;
 }
 
 /* Misc */
@@ -503,7 +507,7 @@
 .hn-treeview-wrap .tab-pane .tab {
     -fx-background-insets: 0 0 0 0;
     -fx-background-radius: 0;
-    -fx-padding: 0 30 0 30;
+    -fx-padding: 0 20 0 20;
 }
 .hn-treeview-wrap .tab-pane .tab:top{
     -fx-background-color: transparent;
