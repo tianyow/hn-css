@@ -95,14 +95,17 @@
     );
 
     -fx-pressed-base: derive(-fx-base,-50%);
-
+    /* required */
     -fx-required-base: rgb(255, 255, 180);
     -fx-required-gradient: linear-gradient(-fx-required-base 0%, derive(-fx-required-base, 20%) 100%);
 
+    /* disabled */
+    -fx-disabled-opacity: 1;
+    -fx-box-disabled-gradient: linear-gradient(rgb(204,204,204) 0%, rgb(204,204,204) 100%);
+
+    /* error */
     -fx-error-base: -fx-error-color1;
     -fx-error-gradient: linear-gradient(-fx-error-color2 0%, derive(-fx-error-color2, 5%) 100%);
-
-    -fx-disabled-opacity: 1;
 }
 /************************************************************************
 + ui-framework.css
@@ -1066,13 +1069,14 @@ d. ProgressIndicator
 /*** 02. TextField ***/
 .text-field {
     -fx-padding: 1 5 1 5;
-    -fx-border-radius: 1;
+    -fx-background-radius: 2;
     -fx-background-image: null;
     -fx-background-color: #999999, white, linear-gradient( white 0%, white 100%), linear-gradient(rgb(230,230,230) 0%, white 35%);
     -fx-highlight-fill: #c2c2c2;
     -fx-highlight-text-fill: black;
     -fx-effect: dropshadow(one-pass-box, gray, 1, 1.0, 0, 1);
 }
+/* required */
 .text-field.hn-required {
     -fx-background-color: #999999, white, linear-gradient( white 0%, white 100%), -fx-required-gradient;
 }
@@ -1080,9 +1084,11 @@ d. ProgressIndicator
 .text-field.hn-required:focused {
     -fx-background-color: -fx-focus-color, #cccccc, linear-gradient( white 0%, white 100%), -fx-focus-gradient;
 }
+/* disabled */
 .text-field:disabled, .text-field:disabled.hn-required {
-    -fx-background-color: #999999, #eeeeee, linear-gradient( white 0%, white 100%), linear-gradient(rgb(204,204,204) 0%, rgb(204,204,204) 100%);
+    -fx-background-color: #999999, #eeeeee, linear-gradient( white 0%, white 100%), -fx-box-disabled-gradient;
 }
+/* error */
 .text-field.error {
     -fx-background-color: -fx-error-base, white, transparent, -fx-error-gradient;
     -fx-text-fill: derive(-fx-error-base, -10%);
@@ -1095,14 +1101,15 @@ d. ProgressIndicator
 }
 /* Selected row */
 .table-view:focused .table-row-cell:filled:focused:selected {
-    -fx-background-color: -fx-base-light;
+    -fx-background-color: -fx-base-dark;
     -fx-text-fill: black;
-    -fx-selection-bar: -fx-base-light;
+    -fx-selection-bar: -fx-base-darker;
     -fx-selection-bar-text: black;
 }
 /* Selected row when table not focused */
-.table-view .table-row-cell:filled:focused:selected {
-    -fx-background-color: -fx-base-light;
+.table-row-cell:filled:focused:selected {
+    -fx-background-color: -fx-base-darker;
+    -fx-text-fill: black;
 }
 /* Row hovered */
 .table-view:row-selection .table-row-cell:filled:hover {
@@ -1132,6 +1139,9 @@ d. ProgressIndicator
 .table-view .column-overlay {
 }
 .table-view .arrow {
+}
+.table-view .column-header-background .show-hide-columns-button .show-hide-column-image {
+    -fx-opacity: 0;
 }
 /*** 06. Pagination ***/
 .pagination {
@@ -1232,27 +1242,6 @@ d. ProgressIndicator
     -fx-padding: 4 4 5 4;
     -fx-effect: dropshadow(one-pass-box, gray, 1, 1.0, 0, 1);
 }
-.check-box.hn-required .box {
-    -fx-background-color: transparent, #999999, linear-gradient( white 0%, white 100%), -fx-required-gradient;
-}
-.check-box:focused .box,
-.check-box.hn-required:focused .box {
-    -fx-background-color: -fx-focus-color, #cccccc, linear-gradient( white 0%, white 100%), -fx-focus-gradient;
-}
-.check-box:hover .box {
-}
-.check-box:focused:hover .box {
-}
-.check-box:armed .box {
-}
-.check-box:focused:selected:armed .box {
-}
-.check-box:selected .box {
-}
-.check-box:selected:focused .box {
-}
-.check-box:focused:pressed .box {
-}
 .check-box .mark {
     -fx-shape: "M5.30273 11.5381 0 6.14893 1.81934 4.35889 5.21973 7.81348 12.2476 0 14.146 1.70703 5.30273 11.5381Z";
     -fx-background-insets: -1 -2;
@@ -1264,6 +1253,27 @@ d. ProgressIndicator
 .check-box:selected .mark {
     -fx-background-color: -fx-mark-color;
 }
+/*.check-box:hover .box {}
+.check-box:focused:hover .box {}
+.check-box:armed .box {}
+.check-box:focused:selected:armed .box {}
+.check-box:selected .box {}
+.check-box:selected:focused .box {}
+.check-box:focused:pressed .box {}  */
+
+/* required */
+.check-box.hn-required .box {
+    -fx-background-color: transparent, #999999, linear-gradient( white 0%, white 100%), -fx-required-gradient;
+}
+.check-box:focused .box,
+.check-box.hn-required:focused .box {
+    -fx-background-color: -fx-focus-color, #cccccc, linear-gradient( white 0%, white 100%), -fx-focus-gradient;
+}
+/* disabled */
+.check-box:disabled .box {
+      -fx-background-color: transparent, #999999, linear-gradient( white 0%, white 100%), -fx-box-disabled-gradient;
+}
+/* error */
 .check-box.error .box {
     -fx-background-color: transparent, -fx-error-base, white, -fx-error-gradient;
     -fx-background-radius: 2;
@@ -1281,27 +1291,6 @@ d. ProgressIndicator
     -fx-padding: 4;
     -fx-effect: dropshadow(one-pass-box, gray, 1, 1.0, 0, 1);
 }
-.radio-button.hn-required .radio {
-    -fx-background-color:  transparent, #999999, linear-gradient( white 0%, white 100%), -fx-required-gradient;
-}
-.radio-button:focused .radio,
-.radio-button.hn-required:focused .radio{
-    -fx-background-color: -fx-focus-color, #cccccc, linear-gradient( white 0%, white 100%), -fx-focus-gradient;
-}
-.radio-button:hover .radio {
-}
-.radio-button:hover:focused .radio {
-}
-.radio-button:focused:pressed .radio {
-}
-.radio-button:selected .radio {
-}
-.radio-button:selected:focused .radio {
-}
-.radio-button:armed .radio {
-}
-.radio-button:focused:selected:armed .radio {
-}
 .radio-button .dot {
     -fx-background-color: transparent;
     -fx-background-insets: 0;
@@ -1312,6 +1301,27 @@ d. ProgressIndicator
     -fx-background-color: -fx-mark-color;
     -fx-background-insets: 0;
 }
+/* .radio-button:hover .radio {}
+.radio-button:hover:focused .radio {}
+.radio-button:focused:pressed .radio {}
+.radio-button:selected .radio {}
+.radio-button:selected:focused .radio {}
+.radio-button:armed .radio {}
+.radio-button:focused:selected:armed .radio {}  */
+
+/* required */
+.radio-button.hn-required .radio {
+    -fx-background-color:  transparent, #999999, linear-gradient( white 0%, white 100%), -fx-required-gradient;
+}
+.radio-button:focused .radio,
+.radio-button.hn-required:focused .radio{
+    -fx-background-color: -fx-focus-color, #cccccc, linear-gradient( white 0%, white 100%), -fx-focus-gradient;
+}
+/* disabled */
+.radio-button:disabled .radio {
+    -fx-background-color: transparent, #999999, linear-gradient( white 0%, white 100%), -fx-box-disabled-gradient;
+}
+/* error */
 .radio-button.error .radio {
     -fx-background-color:  transparent, -fx-error-base, linear-gradient( white 0%, white 100%), -fx-error-gradient;
 }
@@ -1319,16 +1329,28 @@ d. ProgressIndicator
 /*** 11. ComboBoxBase ***/
 .combo-box-base {
     -fx-background-color: transparent, #999999, linear-gradient( white 0%, white 100%), -fx-box-gradient;
-    -fx-background-radius: 1;
+    -fx-background-radius: 2;
     -fx-effect: dropshadow(one-pass-box, gray, 1, 1.0, 0, 1);
 }
+.combo-box-base .arrow-button {
+    -fx-background-color: transparent, #cccccc, linear-gradient( #cccccc 0%, white 100%), -fx-box-gradient;
+    -fx-background-radius: 0 1 1 0;
+    -fx-background-insets: 2;
+}
+.combo-box-base .arrow {}
+.combo-box-base:hover {}
+.combo-box-base:hover .arrow-button {}
+/* focused
+.combo-box-base:focused:showing, .combo-box-base:focused:showing:hover {}
+.combo-box-base:focused:hover {}
+.combo-box-base:focused:pressed {}
+.combo-box-base:focused:pressed .arrow-button,
+.combo-box-base:focused:showing .arrow-button,
+.combo-box-base:focused:showing:hover .arrow-button {} */
+/* required */
 .combo-box.hn-required,
 .combo-box.hn-required .arrow-button {
     -fx-background-color: transparent, #999999, linear-gradient( white 0%, white 100%), -fx-required-gradient;
-}
-.combo-box-base:hover {
-}
-.combo-box-base:focused:showing, .combo-box-base:focused:showing:hover {
 }
 .combo-box-base:focused,
 .combo-box-base:focused .arrow-button,
@@ -1336,38 +1358,28 @@ d. ProgressIndicator
 .combo-box.hn-required:focused .arrow-button {
     -fx-background-color: -fx-focus-color, #cccccc, linear-gradient( white 0%, white 100%), -fx-focus-gradient;
 }
-.combo-box-base:focused:hover {
+/* editable
+.combo-box-base:editable:hover .arrow-button,
+.combo-box-base:editable:focused:pressed .arrow-button {}
+.combo-box-base:editable .arrow-button:hover{}
+.combo-box-base:editable:focused .arrow-button:pressed{}
+.combo-box-base:editable .combo-box-base {}
+.combo-box-base:editable .text-field {}
+.combo-box-base:editable:hover .text-field {}
+.combo-box-base:editable .text-field:focused {} */
+
+/* disabled */
+.combo-box-base:disabled {
+    -fx-opacity: 1;
+    -fx-background-color: transparent, #999999, linear-gradient( white 0%, white 100%), -fx-box-disabled-gradient;
+    -fx-background-radius: 2;
 }
-.combo-box-base:focused:pressed {
-}
-.combo-box-base .arrow-button {
-    -fx-background-color: transparent, #cccccc, linear-gradient( #cccccc 0%, white 100%), -fx-box-gradient;
+.combo-box-base:disabled .arrow-button {
+    -fx-background-color: transparent, #cccccc, linear-gradient( #cccccc 0%, white 100%), -fx-box-disabled-gradient;
     -fx-background-radius: 0 1 1 0;
     -fx-background-insets: 2;
 }
-.combo-box-base:hover .arrow-button{
-}
-.combo-box-base:editable:hover .arrow-button,
-.combo-box-base:editable:focused:pressed .arrow-button {
-}
-.combo-box-base:editable .arrow-button:hover{
-}
-.combo-box-base:editable:focused .arrow-button:pressed{
-}
-.combo-box-base:focused:pressed .arrow-button,
-.combo-box-base:focused:showing .arrow-button,
-.combo-box-base:focused:showing:hover .arrow-button {
-}
-.combo-box-base .arrow {
-}
-.combo-box-base:editable .combo-box-base {
-}
-.combo-box-base:editable .text-field {
-}
-.combo-box-base:editable:hover .text-field {
-}
-.combo-box-base:editable .text-field:focused {
-}
+/* error */
 .combo-box-base.error {
     -fx-background-color: transparent, -fx-error-base, white, -fx-error-gradient;
     -fx-background-radius: 2;
@@ -1378,7 +1390,6 @@ d. ProgressIndicator
 }
 /*** 12. ComboBox ***/
 .combo-box {
-    -fx-background-radius: 2;
 }
 .combo-box .list-cell {
     -fx-background: transparent;
