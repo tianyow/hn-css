@@ -270,15 +270,15 @@
 }
 .hn-version-box {
     -fx-background-color: derive(-fx-base-light, -2%);
-    -fx-font-size: 12;
+    -fx-font-size: 11;
     -fx-font-weight: normal;
 }
 .hn-version-v {
-    -fx-font-size: 12;
+    -fx-font-size: 10;
     -fx-font-weight: bolder;
     -fx-background-color: #666666;
     -fx-text-fill: white;
-    -fx-padding: 2 5 2 5;
+    -fx-padding: 0 5 0 5;
     -fx-background-radius: 1;
 }
 .hn-medal-text {
@@ -298,11 +298,12 @@
     -fx-background-color: -fx-base-gradient;
     -fx-background-radius: 0 0 10 10;
 }
-.hn-txnMsgWrap .label {
-    -fx-font-size: 15;
-}
 .hn-txnMsgWrapShadow {
     -fx-background-color: linear-gradient(to right, transparent 0, #000000 50%, transparent 100%);
+}
+.hn-op-message {
+    -fx-font-size: 15;
+    -fx-text-fill: rgba(0,0,255,1);
 }
 /*-- Txn Zoom */
 .hn-txnZoom {
@@ -333,11 +334,14 @@
     -fx-background-radius: 2 2 0 0;
 }
 .hn-systemInfo {
-    -fx-background-radius: 2 2 0 0;
 }
-.hn-systemInfo .label {
-    -fx-text-fill: black;
+.hn-host-message {
+    -fx-background-color: rgba(255,0,0,1);
+    -fx-background-radius: 2;
     -fx-font-size: 15;
+    -fx-padding: 1 6 1 6;
+    -fx-text-fill: white;
+    -fx-translate-y: -1;
 }
 .hn-serverUrlWrap {
     -fx-background-color: linear-gradient(to right, #999999 0%, #eeeeee 20%, #eeeeee 80%, #999999 100%);
