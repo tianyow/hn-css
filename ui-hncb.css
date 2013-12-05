@@ -1087,7 +1087,7 @@ d. ProgressIndicator
 }
 /* Selected row */
 .table-view:focused .table-row-cell:filled:focused:selected {
-    -fx-background-color: -fx-base-dark;
+    -fx-background-color: -fx-base-darker;
     -fx-text-fill: black;
     -fx-selection-bar: -fx-base-darker;
     -fx-selection-bar-text: black;
@@ -1104,13 +1104,13 @@ d. ProgressIndicator
 }
 /* Selected row hovered */
 .table-view:focused .table-row-cell:filled:focused:selected:hover {
-    -fx-background-color: -fx-base-lighter;
-    -fx-text-fill: black;
+    -fx-background-color: -fx-base-darker;
+    -fx-text-fill: white;
 }
 /* Selected row hovered when table not focused */
 .table-view:row-selection .table-row-cell:filled:focused:hover {
-    -fx-background-color: -fx-base-lighter;
-    -fx-text-fill: black;
+    -fx-background-color: -fx-base-darker;
+    -fx-text-fill: white;
 }
 .table-row-cell:odd {}
 .table-view .column-header, .table-view .filler {
