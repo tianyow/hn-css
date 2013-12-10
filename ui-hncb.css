@@ -567,12 +567,12 @@
     -fx-background-color: transparent;
 }
 .hn-treeview .tree-view {
-    -fx-background-color: linear-gradient(-fx-base-sub4 0%, derive(-fx-base-sub4, 30%) 20%, derive(-fx-base-sub4, 30%) 97%, #cccccc 99%, white 99%);
+    -fx-background-color: linear-gradient(#cccccc 0%, -fx-base-sub4 1%, derive(-fx-base-sub4, 30%) 20%, derive(-fx-base-sub4, 30%) 97%, #cccccc 99%, white 99%);
     -fx-background-insets: 0,0,1;
     -fx-background-radius: 0 0 3 0;
 }
 .hn-treeview .tree-view:focused {
-    -fx-background-color: linear-gradient(-fx-base-sub4 0%, derive(-fx-base-sub4, 30%) 20%, derive(-fx-base-sub4, 30%) 97%, #cccccc 99%, white 99%);
+    -fx-background-color: linear-gradient(#cccccc 0%, -fx-base-sub4 1%, derive(-fx-base-sub4, 30%) 20%, derive(-fx-base-sub4, 30%) 97%, #cccccc 99%, white 99%);
 }
 .hn-treeview .tree-view .tree-cell:hover {
     -fx-background-color: lightgray;
@@ -1079,6 +1079,11 @@ d. ProgressIndicator
     -fx-background-color: -fx-error-base, white, transparent, -fx-error-gradient;
     -fx-text-fill: derive(-fx-error-base, -10%);
 }
+/*** 04. Text Area ***/
+.text-area .content {
+    -fx-background-color: #999999, white, linear-gradient( white 0%, white 100%), linear-gradient(rgb(230,230,230) 0%, white 35%);
+    -fx-background-radius: 2;
+}
 /*** 05. TableView ***/
 .table-view .table-row-cell, .table-view:focused .table-row-cell {
     -fx-text-fill: black;
@@ -1265,7 +1270,7 @@ d. ProgressIndicator
     -fx-text-fill: derive(-fx-error-base, -10%);
 }
 .check-box.error .box {
-    -fx-background-color: transparent, -fx-error-base, white, -fx-error-gradient;
+    -fx-background-color: -fx-error-base, transparent, white, -fx-error-gradient;
     -fx-background-radius: 2;
     -fx-text-fill: -fx-error-base;
 }
@@ -1316,7 +1321,7 @@ d. ProgressIndicator
     -fx-text-fill: derive(-fx-error-base, -10%);
 }
 .radio-button.error .radio {
-    -fx-background-color:  transparent, -fx-error-base, linear-gradient( white 0%, white 100%), -fx-error-gradient;
+    -fx-background-color: -fx-error-base, transparent, white, -fx-error-gradient;
 }
 
 /*** 11. ComboBoxBase ***/
@@ -1374,7 +1379,7 @@ d. ProgressIndicator
 }
 /* error */
 .combo-box-base.error {
-    -fx-background-color: transparent, -fx-error-base, white, -fx-error-gradient;
+    -fx-background-color: -fx-error-base, transparent, white, -fx-error-gradient;
     -fx-background-radius: 2;
     -fx-effect: dropshadow(one-pass-box, gray, 1, 1.0, 0, 1);
 }
