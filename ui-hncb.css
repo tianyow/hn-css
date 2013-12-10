@@ -94,7 +94,7 @@
 
     -fx-pressed-base: derive(-fx-base,-50%);
     /* required */
-    -fx-required-base: rgb(255, 255, 180);
+    -fx-required-base: rgb(255, 248, 131);
     -fx-required-gradient: linear-gradient(-fx-required-base 0%, derive(-fx-required-base, 20%) 100%);
 
     /* disabled */
