@@ -129,6 +129,7 @@
 13. Splash
 14. Loading
 15. Authority
+16. Remind Form
 *******************/
 /*** 00. Container & Elements ***/
 
@@ -1021,7 +1022,21 @@
 .hn-authority-title {
     -fx-background-color: #d2145a;
 }
-
+/*** 16. Remind Form ***/
+.hn-remindform {
+    -fx-background-color: white;
+    -fx-grid-lines-visible: false;
+}
+.hn-remindform-header {
+    -fx-font-size: 18;
+    -fx-font-weight: bold;
+    -fx-background-color: #ffc3bc;
+    -fx-border-width: 1 0 1 0;
+    -fx-border-color: #ff8a96;
+}
+.hn-remindform-rowEven {
+    -fx-background-color: #e8e8e8;
+}
 /************************************************************************
 + ui-controls.css  (Global Styles)
 ************************************************************************/
@@ -1219,6 +1234,36 @@ d. ProgressIndicator
 }
 .button:focused:hover:pressed, .button:armed,
 .button:default:focused:hover:pressed, .button:default:armed {
+}
+/*** 08. Toggle Button ***/
+.toggle-button {
+    -fx-background-color: transparent, rgb(99,99,99), linear-gradient(to bottom,rgb(99,99,99) 0%,rgb(180,182,187) 100%), linear-gradient(to bottom,rgb(255,255,255) 0%,rgb(180,180,180) 75%,rgb(230,230,230) 100%);
+    -fx-background-radius: 2;
+    -fx-text-fill: #333333;
+}
+.toggle-button:focused {
+    -fx-background-color: -fx-focus-color, rgb(99,99,99), linear-gradient(to bottom,rgb(99,99,99) 0%,rgb(180,182,187) 100%), linear-gradient(to bottom,rgb(255,255,255) 0%,rgb(180,180,180) 75%,rgb(230,230,230) 100%);
+}
+.toggle-button:hover {
+    -fx-background-color: transparent,rgb(76,81,86), linear-gradient(to bottom,rgb(200,202,207) 0%,rgb(180,182,187) 100%), linear-gradient(to bottom,rgb(237,239,245) 0%,rgb(211,214,217) 100%);
+}
+.toggle-button:focused:pressed,
+.toggle-button:pressed, {
+    -fx-background-color: rgb(76,81,86),rgb(76,81,86), linear-gradient(to bottom,rgb(200,202,207) 0%,rgb(180,182,187) 100%), linear-gradient(to bottom,derive(-fx-base,-30%) 0%,-fx-base-light 65%,-fx-base-lighter 100%);
+}
+
+.toggle-button:selected,
+.toggle-button:selected:armed,
+.toggle-button:focused:selected:armed {
+    -fx-background-color: rgb(76,81,86),rgb(76,81,86), linear-gradient(to bottom,rgb(200,202,207) 0%,rgb(180,182,187) 100%), linear-gradient(to bottom,derive(-fx-base,-30%) 0%,-fx-base-light 65%,-fx-base-lighter 100%);
+    -fx-effect: innershadow(three-pass-box, rgba(0,0,0,0.6), 8, 0.5, 0, 0);
+    -fx-text-fill: black;
+}
+.toggle-button:selected .text {
+    -fx-translate-y: 1;
+}
+.toggle-button:selected:focused {
+    -fx-background-color: rgb(76,81,86),rgb(76,81,86), linear-gradient(to bottom,rgb(200,202,207) 0%,rgb(180,182,187) 100%), linear-gradient(to bottom,derive(-fx-base,-30%) 0%,-fx-base-light 65%,-fx-base-lighter 100%);
 }
 
 /*** 09. CheckBox ***/
