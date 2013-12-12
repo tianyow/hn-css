@@ -1443,7 +1443,8 @@ d. ProgressIndicator
 .combo-box .list-cell {
     -fx-background: transparent;
     -fx-background-color: transparent;
-    -fx-padding: 2 0 0 7;
+    -fx-padding: 3 0 -1 7;
+    -fx-cell-size: 1em;
 }
 .combo-box:showing .list-cell {
     -fx-text-fill: black;
