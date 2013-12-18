@@ -338,11 +338,12 @@
 }
 .hn-host-message {
     -fx-background-color: rgba(255,0,0,1);
-    -fx-background-radius: 2;
+    -fx-background-radius: 2 2 0 0;
     -fx-font-size: 15;
     -fx-padding: 1 6 1 6;
     -fx-text-fill: white;
-    -fx-translate-y: -1;
+    -fx-translate-y: 0;
+    -fx-effect: innershadow(three-pass-box, #611617, 5, 0.3, 0, 0);
 }
 .hn-serverUrlWrap {
     -fx-background-color: linear-gradient(to right, #999999 0%, #eeeeee 20%, #eeeeee 80%, #999999 100%);
