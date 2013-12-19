@@ -24,6 +24,7 @@
     -fx-font-weight: bold;
     -fx-padding: 0 10 0 10;
     -fx-highlight-fill: -fx-base-ultraDark;
+    -fx-highlight-text-fill: white;
     -fx-effect: innershadow(gaussian, #999999, 10, 0.5, 0, 0);
 }
 .hn-login-panel .text-field:focused {
@@ -90,7 +91,6 @@
 }
 
 /** login BroadCastWrap **/
-
 .hn-login-broadCastWrap {
     -fx-background-radius: 2;
     -fx-background-color: linear-gradient(-fx-base 0, white 100%);
