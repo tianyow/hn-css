@@ -1114,6 +1114,11 @@ d. ProgressIndicator
 .table-view .table-row-cell:odd {
     -fx-background-color: #f6f6f6;
 }
+.table-view .table-row-cell:empty,
+.table-view .table-row-cell:empty .table-cell {
+    -fx-background-color: white;
+    -fx-border-width: 0;
+}
 /* Selected row */
 .table-view .table-row-cell:filled:focused:selected,
 .table-view:focused .table-row-cell:filled:focused:selected {
@@ -1159,7 +1164,9 @@ d. ProgressIndicator
     -fx-opacity: 0;  /* Hide the table-menu-button. */
     -fx-focus-traversable: false;
 }
-
+.table-view .placeholder .label {
+    -fx-text-fill: null; /* Hide warnng text when data is empty */
+}
 .list-view .list-cell {
     -fx-background-color: #ffffff;
     -fx-border-color: #dddddd;
@@ -1175,6 +1182,10 @@ d. ProgressIndicator
     -fx-background-color: #c0ecfb;
     -fx-border-color: #5bb0d6;
     -fx-text-fill: black;
+}
+.list-view .list-cell:empty {
+    -fx-background-color: white;
+    -fx-border-width: 0;
 }
 /*** 06. Pagination ***/
 .pagination {
