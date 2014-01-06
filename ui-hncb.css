@@ -1305,6 +1305,7 @@ d. ProgressIndicator
 
 /*** 09. CheckBox ***/
 .check-box {
+    -fx-background-color: null;
     -fx-padding: 1 2 1 0;
 }
 .check-box .text {
@@ -1339,6 +1340,11 @@ d. ProgressIndicator
 .check-box.hn-required .box {
     -fx-background-color: transparent, #999999, linear-gradient( white 0%, white 100%), -fx-required-gradient;
 }
+/* focused */
+.check-box:focused {
+    -fx-background-color: -fx-focus-base;
+    -fx-text-fill: black;
+}
 .check-box:focused .box,
 .check-box.hn-required:focused .box {
     -fx-background-color: -fx-focus-color, #cccccc, linear-gradient( white 0%, white 100%), -fx-focus-gradient;
@@ -1359,6 +1365,8 @@ d. ProgressIndicator
 /*** 10. RadioButton ***/
 .radio-button {
     -fx-padding: 1 0 1 0;
+    -fx-background-color: null;
+    -fx-background-radius: 1em 0 0 1em;
 }
 .radio-button .text {
     -fx-translate-y: 2;
@@ -1393,6 +1401,11 @@ d. ProgressIndicator
 .radio-button:focused .radio,
 .radio-button.hn-required:focused .radio{
     -fx-background-color: -fx-focus-color, #cccccc, linear-gradient( white 0%, white 100%), -fx-focus-gradient;
+}
+/* focused */
+.radio-button:focused {
+    -fx-background-color: -fx-focus-base;
+    -fx-text-fill: black;
 }
 /* disabled */
 .radio-button:disabled .radio, .radio-button:disabled.hn-required .radio {
