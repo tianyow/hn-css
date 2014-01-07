@@ -947,7 +947,14 @@
 .hn-Modal .hn-Modal-footer .button:disabled {
     -fx-opacity: .5;
 }
-
+.hn-Modal .footerBkgHorizontal {
+    /* Footer Button Bkg to right */
+    -fx-background-color: linear-gradient(to right, #666666 0, #999999 5%);
+}
+.hn-Modal .footerBkgVertical {
+    /* Footer Button Bkg to bottom */
+    -fx-background-color: linear-gradient(to bottom, #666666 0, #999999 5%);
+}
 /*** 12. Report ***/
 .hn-tab-report {
     -fx-background-color: linear-gradient(#f3dd8b 0, #baa891 100%) !important;
