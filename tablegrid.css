@@ -1,0 +1,83 @@
+/*--- TableGrid ---*/
+.TableGrid {
+    -fx-border-width: 1;
+    -fx-border-color: #aaaaaa;
+}
+.TableGrid,
+.TableGrid .scroll-pane .corner {
+    -fx-background-color: derive(-fx-base, -40%);
+}
+.TableGrid .scroll-pane {
+    -fx-background-color: white;
+    -fx-border-width: 0;
+    -fx-padding: 0;
+}
+/*--- GridPane inside TableGrid ---*/
+.TableGrid .TableHeaderScrollPane {
+
+}
+.TableGridPane {
+    -fx-rowBkg: #eeeeee;
+    -fx-oddRowBkg: #f6f6f6;
+
+    -fx-border-width: 0;
+    -fx-border-color: #aaaaaa;
+}
+/* Header */
+.TableGridPane .text-field.TableHeader {
+    -fx-background-color: linear-gradient(white 0, -fx-base-dark 75%, -fx-base-light 100%);
+    -fx-border-color: #aaaaaa;
+    -fx-border-width: 0.5 0.5 1.5 0.5;
+    -fx-font-weight: bolder;
+    -fx-alignment: center-left;
+    -fx-wrap-text: true;
+}
+.TableGridPane .text-field:focused.TableHeader {
+    -fx-border-color: #aaaaaa;
+    -fx-border-width: 0.5; /* No focus color change */
+}
+/* Body- Tabel cell text-fields attributes */
+.TableGridPane .text-field {
+    -fx-background-color: -fx-rowBkg;
+    -fx-background-radius: 0;
+    -fx-highlight-fill: #dddddd;
+    -fx-highlight-text-fill: black;
+    -fx-border-width: 0.5;
+    -fx-border-color: #aaaaaa;
+    -fx-alignment: center-right;
+}
+.TableGridPane .text-field.oddRow {
+    -fx-background-color: -fx-oddRowBkg;
+}
+/* TextField onSelect */
+.TableGridPane .text-field.selected,
+.TableGridPane .text-field.oddRow.selected
+{
+    -fx-background-color: linear-gradient(#dfffff 10%, #a4f3ff 80%, #d4faff 100%);
+    -fx-border-width: 0.5;
+    -fx-border-color: #aaaaaa;
+}
+/* TextField Edit mode */
+.TableGridPane .text-field.edit,
+.TableGridPane .text-field.oddRow.edit,
+.TableGridPane .text-field:focused,
+.TableGridPane .text-field.oddRow:focused {
+    -fx-background-color: linear-gradient(#dddddd 10%, white 30%);
+    -fx-border-color: #333333;
+    -fx-border-width: 1.5;
+}
+/* Text Alignment */
+.TableGridPane .text-field.aLeft {
+    -fx-alignment: center-left; /* table cell content align left */
+}
+/* Text Status Colors */
+.TableGridPane .text-field.info {
+    -fx-text-fill: #008050;
+}
+.TableGridPane .text-field.alert {
+    -fx-text-fill: #003aa0;
+}
+.TableGridPane .text-field.warning {
+    -fx-background-color: #ffddd6;
+    -fx-text-fill: red;
+}
