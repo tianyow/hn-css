@@ -3,7 +3,7 @@
 /***** Theme Colors *****/
 
 /* Spring  */
-.hn-mainWrap, .hn-windowWrap, .hn-modalWrap {
+.hn-mainWrap, .hn-windowWrap, .hn-modalWrap, .hn-windowSlideWrap {
     -fx-base:            rgb(211, 248, 162);
 
     -fx-base-ultraLight: rgb(245, 255, 230);
@@ -141,6 +141,11 @@
 }
 .hn-windowWrap {
     -fx-background-color: radial-gradient(center 50% 10%, radius 100%, #ffffff 20%, #cacaca 100%);
+}
+.hn-windowSlideWrap {
+    -fx-background-color: radial-gradient(center 50% 10%, radius 100%, #ffffff 20%, #cacaca 100%);
+    -fx-border-width: 0 1 1 1;
+    -fx-border-color: transparent #aaaaaa #555555 #cccccc;
 }
 /* TopBar Area */
 .hn-topbar {
@@ -920,7 +925,7 @@
     -fx-background-color: linear-gradient(to right, rgba(255,255,255,0) 0, rgba(0,0,0,0.3) 50%, rgba(255,255,255,0) 100% );
 }
 .hn-Modal .hn-Modal-shadow {
-    -fx-background-color: linear-gradient(to bottom, #737373 0, rgba(220,220,220,0) 100%);
+    -fx-background-color: linear-gradient(to bottom, #3a3a3a 0, rgba(65, 65, 65, 0.8) 100%);
     -fx-background-radius: 1;
 }
 /* Modal Button */
@@ -1609,11 +1614,12 @@ d. ProgressIndicator
 }
 /*** b.Tooltip ***/
 .tooltip {
-    -fx-background-color: rgb(124, 132, 140), rgb(219, 224, 229), rgb(236, 241, 246);
+    -fx-background-color: rgb(215, 215, 215), rgb(255, 255, 255), rgb(255, 253, 177);
     -fx-background-insets: 0,1,2;
     -fx-background-radius: 0 0 0 0;
     -fx-padding: 4 8 4 8;
-    -fx-effect: dropshadow(three-pass-box , rgba(0,0,0,0.4) , 4, 0.0 , 4 , 5 );
+    -fx-effect: dropshadow(three-pass-box , rgba(0,0,0,0.4) , 4, 0.0 , 1,2 );
+    -fx-font-size: 15;
 }
 .tooltip > .page-corner {
     -fx-padding: 0;
