@@ -1,22 +1,11 @@
 /*** Stage Tabs ***/
-.hn-stageTab > .tab-pane {
-    /* Color behind Tabs */
-    -fx-background-color: transparent;
-    -fx-font-size: 15;
+.hn-stage-wrap {
+    -fx-background-color: -fx-base-ultraLight;
 }
-.hn-stageTab > .tab-pane .tab-label {
-    -fx-font-size: 1em;
-    -fx-padding: 0 10 2 0;
-    -fx-text-fill: #222222;
+.hn-stageTab .hn-stage-bar {
+    -fx-background-color: #555555;
 }
-.hn-stageTab > .tab-pane *.tab-header-background {
-    -fx-background-color: #666666;
-}
-.hn-stageTab > .tab-pane .headers-region {
-    -fx-translate-x: -3;
-    -fx-effect: dropshadow(gaussian, #444444, 3, 0.1, 0, 0);
-}
-.hn-stageTab > .tab-pane .tab {
+.hn-stageTab .hn-stage-tab {
     -fx-background-insets: 0 0 0 0;
     -fx-background-radius: 0;
     -fx-padding: 1 3 3 3;
@@ -25,48 +14,10 @@
     -fx-background-repeat: no-repeat;
     -fx-opacity: 1;
 }
-.hn-stageTab > .tab-pane .tab:top,
-.hn-stageTab > .tab-pane .tab:right,
-.hn-stageTab > .tab-pane .tab:left,
-.hn-stageTab > .tab-pane .tab:bottom {
-    -fx-background-color: transparent;
-}
-.hn-stageTab > .tab-pane .tab:top:hover,
-.hn-stageTab > .tab-pane .tab:right:hover,
-.hn-stageTab > .tab-pane .tab:left:hover,
-.hn-stageTab > .tab-pane .tab:bottom:hover {
-    -fx-background-color: transparent;
-}
-.hn-stageTab > .tab-pane .tab:selected,
-.hn-stageTab > .tab-pane .tab:selected:hover {
-    -fx-background-color: transparent;
-    -fx-opacity: 1;
+.hn-stageTab .hn-stage-tab-on {
     -fx-background-image: url("../images/stageTab_on.png");
-    -fx-background-repeat: no-repeat;
 }
-.hn-stageTab > .tab-pane .tab:selected .tab-label {
-    -fx-text-fill: black;
-    -fx-font-weight: bold;
-}
-.hn-stageTab > .tab-pane .tab-close-button {
-    -fx-background-color: -fx-mark-color;
-    -fx-shape: "M 0,0 H1 L 4,3 7,0 H8 V1 L 5,4 8,7 V8 H7 L 4,5 1,8 H0 V7 L 3,4 0,1 Z";
-    -fx-scale-shape: false;
-    -fx-background-insets: -1;
-    -fx-translate-x: -3;
-    -fx-opacity: 0.5;
-}
-.hn-stageTab > .tab-pane .tab-close-button:hover {
-    -fx-background-color: -fx-mark-color;
-    -fx-opacity: 1;
-    -fx-cursor: hand;
-}
-.hn-stageTab > .tab-pane .tab-content-area {
-    /* TabPane Frame*/
-    -fx-background-color: transparent; /*derive(-fx-base, 30%); */
-    -fx-background-radius: 0 12 12 12;
-    -fx-border-width: 0 0 1 0;
-}
+
 .hn-stageTab .hn-leftMenu {
     -fx-background-color: linear-gradient(to right, rgba(100,100,100,0.2) 90%, rgba(50,50,50,0.5) 100%);
     -fx-font-family: MingLiU, monospace;
@@ -93,18 +44,6 @@
 }
 .hn-stageTab .hn-menu-focused {
     -fx-background-color: linear-gradient(to right, #0a7c56 25%, #0a5856 100%);
-}
-.hn-stageTab .hn-stage-tab {
-    -fx-background-insets: 0 0 0 0;
-    -fx-background-radius: 0;
-    -fx-padding: 1 3 3 3;
-    -fx-background-color: transparent;
-    -fx-background-image: url("../images/stageTab_off.png");
-    -fx-background-repeat: no-repeat;
-    -fx-opacity: 1;
-}
-.hn-stageTab .hn-stage-tab-on {
-    -fx-background-image: url("../images/stageTab_on.png");
 }
 
 /*** Tabpane inside StageTabs ***/
