@@ -41,11 +41,16 @@
     -fx-font-weight: bold;
 }
 /*-- ComboBox --*/
-.hn-login-panel .combo-box-base {
+.hn-login-panel .combo-box-base,
+.hn-login-panel .combo-box:editable .text-field {
     -fx-background-color: transparent, #999999, linear-gradient( white 0%, white 100%), -fx-box-gradient;
     -fx-background-radius: 3;
     -fx-font-weight: bold;
     -fx-effect: dropshadow(three-pass-box, gray, 1, 1.0, 0, 1);
+    -fx-prompt-text-fill: #222222;
+}
+.hn-login-panel .combo-box:editable .text-field {
+    -fx-effect: null;
 }
 .hn-login-panel .combo-box-base .arrow-button {
     -fx-background-color: transparent, #cccccc, linear-gradient( #cccccc 0%, white 100%), -fx-box-gradient;
@@ -67,7 +72,8 @@
 .hn-login-panel .combo-box-base:focused,
 .hn-login-panel .combo-box-base:focused .arrow-button,
 .hn-login-panel .combo-box.hn-required:focused,
-.hn-login-panel .combo-box.hn-required:focused .arrow-button {
+.hn-login-panel .combo-box.hn-required:focused .arrow-button,
+.hn-login-panel .combo-box:editable .text-field:focused {
     -fx-background-color: -fx-focus-color, #cccccc, linear-gradient( white 0%, white 100%), -fx-focus-gradient;
 }
 
@@ -78,6 +84,7 @@
     -fx-background-color: transparent, #999999, linear-gradient( white 0%, white 100%), -fx-box-disabled-gradient;
     -fx-background-radius: 2;
 }
+.hn-login-panel .combo-box-base:disabled .text-field,
 .hn-login-panel .combo-box-base:disabled .arrow-button,
 .hn-login-panel .combo-box-base:disabled.hn-required .arrow-button {
     -fx-background-color: transparent, #cccccc, linear-gradient( #cccccc 0%, white 100%), -fx-box-disabled-gradient;
@@ -153,6 +160,16 @@
     -fx-opacity: 0.8;
     -fx-background-color: transparent, #999999, linear-gradient( white 0%, white 100%), -fx-box-disabled-gradient;
     -fx-background-radius: 3;
+}
+.hn-login-panel .password-field.caps:focused {
+    -fx-background-image: url("../images/pwd_caps_bkg.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: right;
+}
+.hn-login-panel .password-field.caps1:focused {
+    -fx-background-image: url("../images/pwd_caps_bkg1.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: right;
 }
 .hn-login-panel .separator .line {
     -fx-border-style: none;

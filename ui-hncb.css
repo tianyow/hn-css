@@ -1119,6 +1119,17 @@ d. ProgressIndicator
     -fx-background-color: -fx-error-base, white, transparent, -fx-error-gradient;
     -fx-text-fill: derive(-fx-error-base, -10%);
 }
+/*** 03. PasswordField
+.password-field.caps:focused {
+    -fx-background-image: url("../images/pwd_caps_bkg.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: right;
+}
+.password-field.caps1:focused {
+    -fx-background-image: url("../images/pwd_caps_bkg1.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: right;
+} ***/
 /*** 04. Text Area ***/
 .text-area {
     -fx-highlight-fill: #c2c2c2;
@@ -1475,8 +1486,6 @@ d. ProgressIndicator
 
 /*** 11. ComboBoxBase ***/
 .combo-box-base {
-    -fx-background-color: transparent, #999999, linear-gradient( white 0%, white 100%), -fx-box-gradient;
-    -fx-background-radius: 2;
     -fx-effect: dropshadow(one-pass-box, gray, 1, 1.0, 0, 1);
 }
 .combo-box-base .arrow-button {
@@ -1484,44 +1493,22 @@ d. ProgressIndicator
     -fx-background-radius: 0 1 1 0;
     -fx-background-insets: 2;
 }
-.combo-box-base .arrow {}
-.combo-box-base:hover {}
-.combo-box-base:hover .arrow-button {}
-/* focused
-.combo-box-base:focused:showing, .combo-box-base:focused:showing:hover {}
-.combo-box-base:focused:hover {}
-.combo-box-base:focused:pressed {}
-.combo-box-base:focused:pressed .arrow-button,
-.combo-box-base:focused:showing .arrow-button,
-.combo-box-base:focused:showing:hover .arrow-button {} */
-/* required */
-.combo-box.hn-required,
-.combo-box.hn-required .arrow-button {
-    -fx-background-color: transparent, #999999, linear-gradient( white 0%, white 100%), -fx-required-gradient;
-}
+/* focused */
 .combo-box-base:focused,
 .combo-box-base:focused .arrow-button,
 .combo-box.hn-required:focused,
 .combo-box.hn-required:focused .arrow-button {
     -fx-background-color: -fx-focus-color, #cccccc, linear-gradient( white 0%, white 100%), -fx-focus-gradient;
 }
-/* editable
-.combo-box-base:editable:hover .arrow-button,
-.combo-box-base:editable:focused:pressed .arrow-button {}
-.combo-box-base:editable .arrow-button:hover{}
-.combo-box-base:editable:focused .arrow-button:pressed{}
-.combo-box-base:editable .combo-box-base {}
-.combo-box-base:editable .text-field {}
-.combo-box-base:editable:hover .text-field {}
-.combo-box-base:editable .text-field:focused {} */
-
 /* disabled */
-.combo-box-base:disabled, .combo-box-base:disabled.hn-required {
+.combo-box-base:disabled,
+.combo-box-base:disabled.hn-required {
     -fx-opacity: 1;
     -fx-background-color: transparent, #999999, linear-gradient( white 0%, white 100%), -fx-box-disabled-gradient;
     -fx-background-radius: 2;
 }
-.combo-box-base:disabled .arrow-button, .combo-box-base:disabled.hn-required .arrow-button {
+.combo-box-base:disabled .arrow-button,
+.combo-box-base:disabled.hn-required .arrow-button {
     -fx-background-color: transparent, #cccccc, linear-gradient( #cccccc 0%, white 100%), -fx-box-disabled-gradient;
     -fx-background-radius: 0 1 1 0;
     -fx-background-insets: 2;
@@ -1530,7 +1517,6 @@ d. ProgressIndicator
 .combo-box-base.error {
     -fx-background-color: -fx-error-base, transparent, white, -fx-error-gradient;
     -fx-background-radius: 2;
-    -fx-effect: dropshadow(one-pass-box, gray, 1, 1.0, 0, 1);
 }
 .combo-box-base.error .list-cell {
     -fx-text-fill: derive(-fx-error-base, -10%);
@@ -1541,8 +1527,42 @@ d. ProgressIndicator
 .combo-box-base.error .arrow-button .arrow {
     -fx-background-color: derive(-fx-error-base, -10%);;
 }
-/*** 12. ComboBox ***/
-.combo-box {
+/*** 12. ComboBox (Editable) ***/
+.combo-box,
+.combo-box:editable .text-field {
+    -fx-background-color: transparent, #999999, linear-gradient( white 0%, white 100%), -fx-box-gradient;
+    -fx-background-radius: 2;
+    -fx-prompt-text-fill: #222222;
+}
+.combo-box .text-field {
+    -fx-effect: null;
+}
+/* focused */
+.combo-box:editable:focused,
+.combo-box:editable .text-field:focused {
+    -fx-background-color: -fx-focus-color, #cccccc, linear-gradient( white 0%, white 100%), -fx-focus-gradient;
+}
+/* required */
+.combo-box.hn-required,
+.combo-box.hn-required .arrow-button,
+.combo-box.hn-required:editable .text-field {
+    -fx-background-color: transparent, #999999, linear-gradient( white 0%, white 100%), -fx-required-gradient;
+}
+.combo-box.hn-required:editable .text-field:focused {
+    -fx-background-color: -fx-focus-color, #cccccc, linear-gradient( white 0%, white 100%), -fx-required-gradient;
+}
+/* disabled */
+.combo-box:disabled,
+.combo-box:editable:disabled,
+.combo-box:editable:disabled .text-field {
+    -fx-background-color: transparent, #999999, linear-gradient( white 0%, white 100%), -fx-box-disabled-gradient;
+}
+/* error */
+.combo-box.error,
+.combo-box.error:editable .text-field {
+    -fx-background-color: -fx-error-base, transparent, white, -fx-error-gradient;
+    -fx-background-radius: 2;
+    -fx-prompt-text-fill: -fx-error-base;
 }
 .combo-box .list-cell {
     -fx-background: transparent;
