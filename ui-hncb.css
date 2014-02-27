@@ -1087,8 +1087,7 @@
 /** Misc
 a. Separator
 b. Tooltip
-c. ProgressBar
-d. ProgressIndicator
+c. PrintBtn
 
 *******************/
 
@@ -1690,4 +1689,21 @@ d. ProgressIndicator
     -fx-background-color: transparent;
     -fx-shape: " ";
     -fx-effect: null;
+}
+/*** c.PrintBtn ***/
+.printBtn {
+    -fx-background-color: linear-gradient(to bottom, #888888 0, #333333 100%);
+    -fx-effect: dropshadow(three-pass-box , rgba(0,0,0,0.4) , 4, 0.0 , 1,2 );
+    -fx-padding: 7 10 7 10;
+}
+.printBtn:hover {
+    -fx-background-color: linear-gradient(to bottom, #999999 0, #444444 100%);
+}
+.printBtn:pressed {
+    -fx-effect: null;
+    -fx-translate-y: 1;
+}
+.printBtn .label {
+    -fx-text-fill: white;
+    -fx-translate-y: 1;
 }
