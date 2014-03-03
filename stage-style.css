@@ -22,6 +22,9 @@
     -fx-background-color: linear-gradient(to right, rgba(100,100,100,0.2) 90%, rgba(50,50,50,0.5) 100%);
     -fx-font-family: MingLiU, monospace;
     -fx-font-size: 15;
+    -fx-menu-disabled: gray;
+    -fx-menu-finished: greenyellow;
+    -fx-menu-todo: orange;
 }
 .hn-stageTab  .hn-leftMenu .label {
     -fx-text-fill: white;
@@ -42,8 +45,31 @@
 .hn-stageTab .hn-leftMenu-Sub .label {
     -fx-text-fill: #dddddd;
 }
-.hn-stageTab .hn-menu-focused {
+/* Menu Status */
+.hn-stageTab .hn-menu-active {
     -fx-background-color: linear-gradient(to right, #0a7c56 25%, #0a5856 100%);
+}
+.hn-stageTab .hn-menu-finished {
+    -fx-background-image: url("../images/leftmenu-bkgicon-finished.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: right top;
+}
+.hn-stageTab .hn-menu-finished .label {
+    -fx-text-fill: -fx-menu-finished;
+}
+.hn-stageTab .hn-menu-disabled {
+    -fx-background-color: #cccccc;
+}
+.hn-stageTab .hn-menu-disabled .label {
+    -fx-text-fill: #777777;
+}
+.hn-stageTab .hn-menu-todo {
+    -fx-background-image: url("../images/leftmenu-bkgicon-todo.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: right top;
+}
+.hn-stageTab .hn-menu-todo .label {
+    -fx-text-fill: -fx-menu-todo;
 }
 
 /*** Tabpane inside StageTabs ***/
