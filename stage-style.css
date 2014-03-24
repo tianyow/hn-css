@@ -33,6 +33,7 @@
     -fx-background-color: #333333;
     -fx-border-color: #444444;
     -fx-border-width: 0 0 1 0;
+    -fx-padding: 16 0 15 0;
 }
 .hn-stageTab .hn-leftMenu-pri .label {
     -fx-padding: 0 0 0 5;
@@ -41,6 +42,7 @@
     -fx-background-color: #666666;
     -fx-border-width: 0 0 1 5;
     -fx-border-color: #545454;
+    -fx-padding: 9 0 8 3;
 }
 .hn-stageTab .hn-leftMenu-Sub .label {
     -fx-text-fill: #dddddd;

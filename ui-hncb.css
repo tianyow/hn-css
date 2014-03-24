@@ -302,6 +302,10 @@
     -fx-background-color: -fx-base-gradient;
     -fx-background-radius: 0 0 10 10;
 }
+.hn-reportMsgWrap {
+    -fx-background-color: linear-gradient(to right, #cacac2 5%, #e1dfd8 50%, #eeeeee 95%);
+    -fx-background-radius: 0 0 10 10;
+}
 .hn-txnMsgWrapShadow {
     -fx-background-color: linear-gradient(to right, transparent 0, #000000 50%, transparent 100%);
 }
