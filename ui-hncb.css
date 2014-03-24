@@ -1148,6 +1148,7 @@ c. PrintBtn
 .text-area:focused,
 .text-area.hn-required:focused {
     -fx-background-color: -fx-focus-color;
+    -fx-background-radius: 0;
 }
 .text-area:focused .content,
 .text-area.hn-required:focused .content {
@@ -1167,6 +1168,15 @@ c. PrintBtn
 .text-area.error:focused .scroll-pane {
     -fx-background-color: -fx-error-gradient;
 }
+/* TextArea Scroll bar shrink */
+.text-area .scroll-pane .scroll-bar:vertical .increment-button,
+.text-area .scroll-pane .scroll-bar:vertical .decrement-button {
+    -fx-padding: 3 1 3 1;
+}
+.text-area .scroll-pane .scroll-bar:horizontal .increment-button,
+.text-area .scroll-pane .scroll-bar:horizontal .decrement-button {
+    -fx-padding: 1 3 1 3;
+}
 /*** 05. TableView ***/
 .table-view .table-row-cell, .table-view:focused .table-row-cell, .table-view:selected .table-row-cell {
     -fx-text-fill: black;
@@ -1176,9 +1186,6 @@ c. PrintBtn
 .table-view .table-row-cell:odd, .table-view .table-row-cell:even {
     -fx-border-width: 0 0 1 0;
     -fx-border-color: #dddddd;
-}
-.table-view .table-row-cell:odd {
-    -fx-background-color: #f6f6f6;
 }
 .table-view .table-row-cell:empty,
 .table-view .table-row-cell:empty .table-cell {
