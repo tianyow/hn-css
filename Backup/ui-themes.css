@@ -1,6 +1,6 @@
 /***** Theme Colors *****/
 
-/* Spring  */
+/* Spring
 .hn-mainWrap {
     -fx-base:            rgb(211, 248, 162);
 
@@ -17,18 +17,23 @@
     -fx-base-sub4:       rgb(221, 255, 224);
 
     -fx-base-gradient: linear-gradient(to right, -fx-base-light 5%, -fx-base-lighter 50%, -fx-base-light 95%);
-}
+}   */
 
 /*  Summer  *
 .hn-mainWrap {
-    -fx-base:          rgb(213, 239, 255);
+    -fx-base:            rgb(213, 239, 255);
 
-    -fx-base-light:    rgb(233, 248, 255);
-    -fx-base-midLight: rgb(185, 231, 255);
-    -fx-base-mid:      rgb(123, 219, 255);
-    -fx-base-midDark:  rgb(5, 192, 242);
-    -fx-base-dark:     rgb(5, 126, 163);
-    -fx-base-deepDark: rgb(22, 76, 141);
+    -fx-base-ultraLight: rgb(233, 248, 255);
+    -fx-base-lighter:    rgb(185, 235, 255);
+    -fx-base-light:      rgb(123, 219, 255);
+    -fx-base-dark:       rgb(  5, 192, 242);
+    -fx-base-darker:     rgb(  5, 126, 207);
+    -fx-base-ultraDark:  rgb( 22, 106, 184);
+
+    -fx-base-sub1:       rgb( 10,  96, 154);
+    -fx-base-sub2:       rgb(  0,  78, 154);
+    -fx-base-sub3:       rgb( 10,  63, 114);
+    -fx-base-sub4:       rgb(207, 255, 245);
 
     -fx-base-gradient: linear-gradient(to right, -fx-base-midDark 0%, -fx-base-mid 10%, -fx-base-midLight 50%, -fx-base-mid 90%, -fx-base-midDark 100%);
 }
@@ -36,14 +41,19 @@
 
 /* Fall *
 .hn-mainWrap {
-    -fx-base: rgb(255, 254, 228);
+    -fx-base:            rgb(255, 255, 228);
 
-    -fx-base-light:    rgb(253, 255, 240);
-    -fx-base-midLight: rgb(255, 254, 175);
-    -fx-base-mid:      rgb(255, 227, 139);
-    -fx-base-midDark:  rgb(242, 203, 60);
-    -fx-base-dark:     rgb(204, 143, 2);
-    -fx-base-deepDark: rgb(143, 84, 4);
+    -fx-base-ultraLight: rgb(253, 255, 240);
+    -fx-base-lighter:    rgb(255, 255, 175);
+    -fx-base-light:      rgb(255, 227, 139);
+    -fx-base-dark:       rgb(242, 203,  60);
+    -fx-base-darker:     rgb(204, 143,   2);
+    -fx-base-ultraDark:  rgb(192, 106,   4);
+
+    -fx-base-sub1:       rgb(162, 106,   0);
+    -fx-base-sub2:       rgb(143,  84,   4);
+    -fx-base-sub3:       rgb(106,  68,   0);
+    -fx-base-sub4:       rgb(252, 255, 224);
 
     -fx-base-gradient: linear-gradient(to right, -fx-base-midDark 0%, -fx-base-mid 10%, -fx-base-midLight 50%, -fx-base-mid 90%, -fx-base-midDark 100%);
 }
@@ -51,14 +61,19 @@
 
 /* Winter *
 .hn-mainWrap {
-    -fx-base: rgb(255, 241, 243);
+    -fx-base:            rgb(255, 241, 243);
 
-    -fx-base-light:     rgb(255, 247, 244);
-    -fx-base-midLight:  rgb(255, 219, 214);
-    -fx-base-mid:       rgb(240, 180, 186);
-    -fx-base-midDark:   rgb(236, 125, 125);
-    -fx-base-dark:      rgb(204, 0, 69);
-    -fx-base-deepDark: rgb(153, 16, 47);
+    -fx-base-ultraLight: rgb(255, 247, 244);
+    -fx-base-lighter:    rgb(255, 220, 215);
+    -fx-base-light:      rgb(240, 180, 186);
+    -fx-base-dark:       rgb(236, 125, 125);
+    -fx-base-darker:     rgb(225,  48,  70);
+    -fx-base-ultraDark:  rgb(194,   0,  70);
+
+    -fx-base-sub1:       rgb(177,   0,  68);
+    -fx-base-sub2:       rgb(149,   0,  68);
+    -fx-base-sub3:       rgb(121,   0,  45);
+    -fx-base-sub4:       rgb(255, 240, 245);
 
     -fx-base-gradient: linear-gradient(to right, -fx-base-midDark 0%, -fx-base-mid 10%, -fx-base-midLight 50%, -fx-base-mid 90%, -fx-base-midDark 100%);
 }        */

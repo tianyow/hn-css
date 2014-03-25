@@ -1,4 +1,16 @@
 .hn-loginWrap {
+
+    /*** Season Themes / ui-login-themes.css  ***/
+    -fx-base:            rgb(252, 177, 169);
+
+    -fx-base-ultraLight: rgb(252, 240, 237);
+    -fx-base-lighter:    rgb(252, 230, 225);
+    -fx-base-light:      rgb(255, 218, 212);
+    -fx-base-dark:       rgb(255, 131, 134);
+    -fx-base-darker:     rgb(225, 101, 116);
+    -fx-base-ultraDark:  rgb(164,  58,  86);
+    /*** Season Themes end ***/
+
     -fx-font-family: "Microsoft JhengHei", monospace, sans-serif;
     -fx-font-size: 18;
 
@@ -127,7 +139,7 @@
     -fx-background-insets: 0,1;
     -fx-font-size: 18;
 }
-/*-- TextField --*/
+/*-- TextField
 .hn-login-Username {
     -fx-background-image: url('../images/icon-login-username.png');
     -fx-background-repeat: no-repeat;
@@ -142,7 +154,7 @@
     -fx-background-image: url('../images/icon-login-bankNo.png');
     -fx-background-repeat: no-repeat;
     -fx-background-position: 8 8;
-}
+} --*/
 .hn-login-panel .text-field {
     -fx-background-radius: 3;
     -fx-background-color: transparent, #999999, linear-gradient( white 0%, white 100%), linear-gradient( #cccccc 0%, white 50%);
@@ -222,7 +234,7 @@
     -fx-text-fill: white;
 }
 .hn-login-timebox {
-    -fx-background-color: linear-gradient(#CAFAA4 0, #e6ffd8 100%);
+    -fx-background-color: linear-gradient(-fx-base-light 0, -fx-base-ultraLight 100%);
     -fx-background-radius: 1;
     -fx-border-color: derive(-fx-base-light, -40%);
     -fx-border-width: 0;
