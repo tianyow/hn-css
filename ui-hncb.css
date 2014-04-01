@@ -4,19 +4,19 @@
 
 .hn-mainWrap, .hn-windowWrap, .hn-modalWrap, .hn-windowSlideWrap {
     /*** Season Themes / ui-themes.css ***/
-    -fx-base:            rgb(255, 241, 243);
+    -fx-base:            rgb(211, 248, 162);
 
-    -fx-base-ultraLight: rgb(255, 247, 244);
-    -fx-base-lighter:    rgb(255, 220, 215);
-    -fx-base-light:      rgb(240, 180, 186);
-    -fx-base-dark:       rgb(236, 125, 125);
-    -fx-base-darker:     rgb(225,  48,  70);
-    -fx-base-ultraDark:  rgb(194,   0,  70);
+    -fx-base-ultraLight: rgb(245, 255, 230);
+    -fx-base-lighter:    rgb(222, 252, 151);
+    -fx-base-light:      rgb(202, 237, 119);
+    -fx-base-dark:       rgb(136, 203,  56);
+    -fx-base-darker:     rgb( 94, 183,   0);
+    -fx-base-ultraDark:  rgb( 57, 174,  58);
 
-    -fx-base-sub1:       rgb(177,   0,  68);
-    -fx-base-sub2:       rgb(149,   0,  68);
-    -fx-base-sub3:       rgb(121,   0,  45);
-    -fx-base-sub4:       rgb(255, 240, 245);
+    -fx-base-sub1:       rgb( 10, 124,  86);
+    -fx-base-sub2:       rgb( 10, 116, 106);
+    -fx-base-sub3:       rgb( 10,  88,  86);
+    -fx-base-sub4:       rgb(221, 255, 224);
 
     -fx-base-gradient: linear-gradient(to right, -fx-base-light 5%, -fx-base-lighter 50%, -fx-base-light 95%);
     /*** Season Themes end ***/
@@ -29,7 +29,7 @@
         Fonts
     **********************/
     -fx-font-size: 15;
-    /*-fx-font-family: "Microsoft JhengHei", Arial, monospace, sans-serif; PMingLiU*/
+    /*-fx-font-family: "Microsoft JhengHei", Arial, monospace, sans-serif; PMingLiU */
     -fx-font-family: Arial, monospace, sans-serif;
     -fx-font-smoothing-type: lcd;
     -fx-font-weight: bold;
@@ -574,6 +574,7 @@
 /* Treeview */
 .hn-treeview {
     -fx-padding: 10;
+    -fx-font-family: MingLiU, monospace;
 }
 .hn-treeview .tree-cell {
     -fx-background-color: transparent; /* derive(-fx-base, 30%);*/
@@ -996,7 +997,10 @@
     -fx-font-family: MingLiU, monospace;
     -fx-effect: dropshadow(one-pass-box, #333333, 5, 0.2, 0, 2)
 }
-
+.hn-reportContent .label {
+    -fx-font-size: 16;
+    -fx-text-fill: black;
+}
 /*** 13. Splash ***/
 .hn-splash .button {
     -fx-background-color: transparent, transparent, linear-gradient(to bottom, #66122d 0%, #793140 100%), linear-gradient(to bottom, #793140 0%, #66122d 100%);

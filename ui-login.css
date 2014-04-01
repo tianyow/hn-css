@@ -1,14 +1,14 @@
 .hn-loginWrap {
 
     /*** Season Themes / ui-login-themes.css  ***/
-    -fx-base:            rgb(252, 177, 169);
+    -fx-base:            rgb(157, 240, 119);
 
-    -fx-base-ultraLight: rgb(252, 240, 237);
-    -fx-base-lighter:    rgb(252, 230, 225);
-    -fx-base-light:      rgb(255, 218, 212);
-    -fx-base-dark:       rgb(255, 131, 134);
-    -fx-base-darker:     rgb(225, 101, 116);
-    -fx-base-ultraDark:  rgb(164,  58,  86);
+    -fx-base-ultraLight: rgb(242, 250, 235);
+    -fx-base-lighter:    rgb(232, 240, 205);
+    -fx-base-light:      rgb(210, 230, 157);
+    -fx-base-dark:       rgb( 88, 186,  15);
+    -fx-base-darker:     rgb( 56, 149,  10);
+    -fx-base-ultraDark:  rgb(  0,  81,   5);
     /*** Season Themes end ***/
 
     -fx-font-family: "Microsoft JhengHei", monospace, sans-serif;
