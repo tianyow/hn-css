@@ -263,6 +263,21 @@
     -fx-stroke: black;
     -fx-stroke-width: 0.2;
 }
+.toggle-button.hn-favorite-toggle {
+    -fx-background-color: transparent;
+    -fx-background-image: url('../images/icon-favorite-off.png');
+    -fx-border-width: null;
+    -fx-opacity: 0.5;
+    -fx-cursor: hand;
+}
+.toggle-button.hn-favorite-toggle:hover {
+    -fx-opacity: 0.8;
+}
+.toggle-button.hn-favorite-toggle:selected {
+    -fx-background-image: url('../images/icon-favorite-on.png');
+    -fx-effect: innershadow(three-pass-box, maroon, 5, 0.3, 0, 0);
+    -fx-opacity: 1;
+}
 .hn-txnQuickInput {
     -fx-background-color: linear-gradient(-fx-base-sub1 0, -fx-base-sub3 50%, -fx-base-sub2 100%);
     -fx-background-radius: 6 0 0 6;
