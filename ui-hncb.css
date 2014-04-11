@@ -1103,6 +1103,7 @@
 13. ScrollPane
 14. TabPane
 15. TitledPane
+16. HTML-Editor
 
 /** Misc
 a. Separator
@@ -1676,7 +1677,7 @@ c. PrintBtn
     /* TabPane Frame*/
     -fx-background-color: #cccccc, white;
 }
-/*** TitledPane ***/
+/*** 15. TitledPane ***/
 .titled-pane:focused {
     -fx-text-fill: -fx-text-base-color;
 }
@@ -1744,7 +1745,19 @@ c. PrintBtn
     -fx-background-color: transparent, linear-gradient(#eeeeee 0, #efefef 50%);
     -fx-background-insets: 0;
 }
-
+/*** 16. HTML-Editor ***/
+.html-editor .button {
+    -fx-padding: 3 8 2 8;
+    -fx-background-radius: 1;
+}
+.html-editor .toggle-button {
+    -fx-padding: 1 8 1 8;
+    -fx-background-radius: 1;
+}
+.html-editor .popup-button {
+    -fx-label-padding: 1 8 1 8;
+    -fx-background-radius: 1;
+}
 /*** b.Tooltip ***/
 .tooltip {
     -fx-background-color: rgb(215, 215, 215), rgb(255, 255, 255), rgb(255, 253, 177);
