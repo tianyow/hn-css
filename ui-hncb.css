@@ -589,7 +589,6 @@
 /* Treeview */
 .hn-treeview {
     -fx-padding: 10;
-    -fx-font-family: MingLiU, monospace;
 }
 .hn-treeview .tree-cell {
     -fx-background-color: transparent; /* derive(-fx-base, 30%);*/
@@ -848,29 +847,29 @@
 }  --*/
 
 /*** 09.FunctionKey Buttons ***/
-.button {
+.hn-funcKeyWrap .button {
     -fx-background-color: transparent,rgb(99,99,99), linear-gradient(to bottom,rgb(99,99,99) 0%,rgb(180,182,187) 100%), linear-gradient(to bottom,rgb(255,255,255) 0%,rgb(180,180,180) 75%,rgb(230,230,230) 100%);
     -fx-background-insets: 0,1,2,3;
     -fx-background-radius: 2;
     -fx-padding: 5 15 4 15;
     -fx-text-fill: black;
 }
-.button:focused {
+.hn-funcKeyWrap .button:focused {
     -fx-background-color: -fx-focus-color, -fx-base-darker, linear-gradient(to bottom,rgb(199,199,199) 0%,rgb(180,182,187) 100%), linear-gradient(to bottom,-fx-base-ultraLight 0%,-fx-base 75%,-fx-base-light 100%);
     -fx-background-insets: -0.3,1,2,3;
 }
-.button:focused:hover {
+.hn-funcKeyWrap .button:focused:hover {
     -fx-background-color: -fx-focus-color, -fx-base-darker, linear-gradient(to bottom,rgb(199,199,199) 0%,rgb(180,182,187) 100%), linear-gradient(to bottom,-fx-base-ultraLight 30%,-fx-base 95%,-fx-base-light 100%);
 }
-.button:hover {
+.hn-funcKeyWrap .button:hover {
     -fx-background-color: transparent,rgb(76,81,86), linear-gradient(to bottom,rgb(200,202,207) 0%,rgb(180,182,187) 100%), linear-gradient(to bottom,rgb(237,239,245) 0%,rgb(211,214,217) 100%);
 }
-.button:focused:hover:pressed,
-.button:hover:armed, .button:armed {
+.hn-funcKeyWrap .button:focused:hover:pressed,
+.hn-funcKeyWrap .button:hover:armed, .hn-funcKeyWrap .button:armed {
     -fx-background-color: rgb(76,81,86),rgb(76,81,86), linear-gradient(to bottom,rgb(200,202,207) 0%,rgb(180,182,187) 100%), linear-gradient(to bottom,derive(-fx-base,-30%) 0%,-fx-base-light 65%,-fx-base-lighter 100%);
     -fx-padding: 6 15 3 15;
 }
-.button:disabled {
+.hn-funcKeyWrap .button:disabled {
     -fx-opacity: .7;
 }
 /*** 10. StageTab ***/
@@ -1345,24 +1344,32 @@ c. PrintBtn
     -fx-font-weight: bold;
 }
 /*** 07. Button ***/
+
 .button {
+    -fx-background-color: rgb(99,99,99), linear-gradient(to bottom,rgb(255,255,255) 0%,rgb(190,190,190) 75%,rgb(230,230,230) 100%);
+    -fx-background-insets: 0,1,1,2;
+    -fx-background-radius: 1;
+    -fx-padding: 2 12 0 12;
+    -fx-text-fill: black;
+    -fx-font-size: 15;
 }
 .button:focused {
+    -fx-background-color: -fx-focus-color, linear-gradient(to bottom,-fx-base-ultraLight 0%,-fx-base 75%,-fx-base-light 100%);
+    -fx-background-insets: -0.3,1,2,3;
 }
 .button:focused:hover {
+    -fx-background-color: -fx-focus-color, linear-gradient(to bottom,-fx-base-ultraLight 30%,-fx-base 95%,-fx-base-light 100%);
 }
 .button:hover {
+    -fx-background-color: rgb(76,81,86), linear-gradient(to bottom,rgb(237,239,245) 0%,rgb(211,214,217) 100%);
 }
-.button:default {
+.button:focused:hover:pressed,
+.button:hover:armed, .button:armed {
+    -fx-background-color: rgb(76,81,86), linear-gradient(to bottom,derive(-fx-base,-30%) 0%,-fx-base-light 65%,-fx-base-lighter 100%);
+    -fx-padding: 3 12 -1 12;
 }
-.button:default:hover {
-}
-.button:default:focused {
-}
-.button:default:focused:hover {
-}
-.button:focused:hover:pressed, .button:armed,
-.button:default:focused:hover:pressed, .button:default:armed {
+.button:disabled {
+    -fx-opacity: .7;
 }
 /*** 08. Toggle Button ***/
 .toggle-button {
@@ -1677,20 +1684,18 @@ c. PrintBtn
     -fx-background-color: -fx-base-ultraDark, linear-gradient(to bottom,-fx-base-darker 0%,-fx-base-dark 100%), linear-gradient(to bottom,-fx-base-lighter 0%,-fx-base-dark 100%);
     -fx-background-insets: 0,1,2;
     -fx-background-radius: 0;
-    -fx-padding: 2;
-}
-.titled-pane > .title .text {
-    -fx-padding: 0 0 5 0;
+    -fx-padding: 1 0 0 8;
 }
 .titled-pane > .title > .arrow-button {
-    -fx-background-color: transparent, linear-gradient(to bottom,-fx-base-darker 0%,-fx-base-dark 100%), linear-gradient(to bottom,-fx-base-lighter 0%,-fx-base-dark 100%);
-    -fx-background-insets: 0,4,5,6;
-    -fx-background-radius: 2;
-    -fx-padding: 10;
+    -fx-background-color: transparent, linear-gradient(to bottom,-fx-base-lighter 0%,-fx-base-dark 100%);
+    -fx-background-insets: 0,2,3,4;
+    -fx-background-radius: 1;
+    -fx-padding: 8;
+    -fx-translate-x: -2;
 }
 .titled-pane:focused > .title .arrow-button {
-    -fx-background-color: transparent, linear-gradient(to bottom,-fx-base-darker 0%,-fx-base-dark 100%), linear-gradient(to bottom,-fx-base-lighter 0%,-fx-base-dark 100%);
-    -fx-background-insets: 4,5,6;
+    -fx-background-color: transparent, linear-gradient(to bottom,-fx-base-lighter 0%,-fx-base-dark 100%);
+    -fx-background-insets: 2,3,4;
 }
 .titled-pane:focused > .title, .titled-pane:focused > .title:hover {
     -fx-background-color: -fx-base-ultraDark, linear-gradient(to bottom,-fx-base-darker 0%,-fx-base-dark 100%), linear-gradient(to bottom,-fx-base-lighter 0%,-fx-base-dark 100%);
@@ -1715,14 +1720,31 @@ c. PrintBtn
 /*** TitledPane noborder ***/
 .titled-pane.titled-pane-noborder > .title {
     -fx-background-color: transparent, linear-gradient(to bottom,-fx-base-lighter 0%,-fx-base-dark 100%), linear-gradient(to bottom,-fx-base-lighter 0%,-fx-base-dark 100%);
-    -fx-background-insets: 0;
+    -fx-background-insets: 0,1,2;
     -fx-background-radius: 0;
-    -fx-padding: 2;
+    -fx-padding: 1 0 0 8;
 }
 .titled-pane.titled-pane-noborder > *.content {
     -fx-background-color: transparent, linear-gradient(-fx-base-ultraLight 0, white 50%), linear-gradient(-fx-base-ultraLight 0, white 50%);
     -fx-background-insets: 0;
 }
+/*** TitledPane inside TitledPane ***/
+.titled-pane.titled-pane-inner > .title {
+    -fx-background-color: transparent, linear-gradient(to bottom, #cccccc 0%, #999999 70%, #aaaaaa 100%);
+    -fx-background-insets: 0,1,2;
+    -fx-background-radius: 0;
+    -fx-padding: 1 0 0 8;
+    -fx-text-fill: black;
+}
+.titled-pane.titled-pane-inner > .title .arrow-button {
+    -fx-background-color: transparent, linear-gradient(to bottom, #cccccc 0%, #999999 70%, #aaaaaa 100%);
+    -fx-background-insets: 2,3,4;
+}
+.titled-pane.titled-pane-inner > *.content {
+    -fx-background-color: transparent, linear-gradient(#eeeeee 0, #efefef 50%);
+    -fx-background-insets: 0;
+}
+
 /*** b.Tooltip ***/
 .tooltip {
     -fx-background-color: rgb(215, 215, 215), rgb(255, 255, 255), rgb(255, 253, 177);
