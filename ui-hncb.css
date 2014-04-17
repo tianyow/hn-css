@@ -173,7 +173,7 @@
     -fx-effect: innershadow(three-pass-box, #664948, 5, 0.5, 0, 0);
 }
 .hn-userinfo:hover {
-    -fx-translate-y: 203;
+    -fx-translate-y: 255;
     -fx-effect: dropshadow(three-pass-box, gray, 5, 0.5, 0, 2);
 }
 .hn-userinfo .hn-userinfo-expand {
@@ -1652,7 +1652,7 @@ c. PrintBtn
     -fx-background-color: linear-gradient(#666666 70%, #333333 100%);
 }
 .tab:top .tab-label {
-    -fx-text-fill: #bababa;
+    -fx-text-fill: #cccccc;
     -fx-alignment: center;
 }
 .tab:top:hover {
@@ -1663,6 +1663,12 @@ c. PrintBtn
 }
 .tab:selected .tab-label {
     -fx-text-fill: #000000;
+}
+.tab:disabled, .tab:disabled:hover {
+    -fx-background-color: #cccccc;
+}
+.tab:disabled .tab-label {
+    -fx-text-fill: #777777;
 }
 .tab-close-button {
     -fx-background-color: -fx-mark-color;
