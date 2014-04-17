@@ -244,6 +244,11 @@
     -fx-text-fill: black;
 }
 /** login InfoWrap **/
+.hn-logout-status .label {
+    -fx-font-size: 15;
+    -fx-text-fill: -fx-gray-dark;
+    -fx-translate-y: 1;
+}
 .hn-login-infoWrap {
     -fx-minimize-color1: #222222;
     -fx-minimize-color2: #777777;
@@ -259,7 +264,7 @@
 }
 .hn-login-infoValue {
     -fx-font-size: 18;
-    -fx-text-fill: -fx-gray-light;
+    -fx-text-fill: -fx-gray-dark;
 }
 /** Login Window Control Buttons **/
 .hn-minimize.button {
