@@ -1204,6 +1204,25 @@ c. PrintBtn
     -fx-selection-bar: -fx-base-light;
     -fx-selection-bar-text: black;
 }
+.table-view .table-cell, .table-view:editable .table-cell {
+    -fx-padding: 0;
+}
+.table-view .table-cell .label {
+    -fx-padding: 0.166667em;
+}
+/*** Editable text-field in Tableview ***/
+.table-view .table-cell .text-field, .text-field .text-field-test {
+    -fx-padding: 1 5 1 5;
+    -fx-background-radius: 0;
+    -fx-background-image: null;
+    -fx-background-insets: 0;
+    -fx-background-color: transparent;
+    -fx-highlight-fill: #c2c2c2;
+    -fx-highlight-text-fill: black;
+}
+.table-view .table-cell .text-field:focused, .text-field .text-field-test:focused {
+    -fx-background-color: -fx-focus-gradient;
+}
 .table-view .table-row-cell:odd, .table-view .table-row-cell:even {
     -fx-border-width: 0 0 1 0;
     -fx-border-color: #dddddd;
@@ -1274,6 +1293,9 @@ c. PrintBtn
     -fx-background-color: #c0ecfb;
     -fx-border-color: #5bb0d6;
     -fx-text-fill: black;
+}
+.list-view .list-cell:focused {
+    -fx-background-color: -fx-focus-gradient;
 }
 .list-view .list-cell:empty {
     -fx-background-color: white;
