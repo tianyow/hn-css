@@ -1849,6 +1849,14 @@ c. PrintBtn
     -fx-cursor: hand;
     -fx-translate-x: 1;
 }
+.hn-guideMenu-group .label:focused {
+    -fx-font-weight: bolder;
+    -fx-text-fill: #005aa9;
+    -fx-translate-x: 1;
+}
+.hn-guideMenu-group .label:pressed {
+    -fx-translate-y: 1;
+}
 .hn-guideMenu-group-header.label:hover {
     -fx-text-fill: #ff0011;
 }
