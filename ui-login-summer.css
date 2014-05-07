@@ -1,0 +1,308 @@
+.hn-loginWrap {
+
+    /*** Season Themes / ui-login-themes.css  ***/
+    -fx-base:            rgb(136, 232, 255);
+
+    -fx-base-ultraLight: rgb(233, 252, 255);
+    -fx-base-lighter:    rgb(205, 248, 255);
+    -fx-base-light:      rgb(180, 245, 255);
+    -fx-base-dark:       rgb(  5, 134, 217);
+    -fx-base-darker:     rgb( 10,  96, 167);
+    -fx-base-ultraDark:  rgb( 10,  63, 114);
+    /*** Season Themes end ***/
+
+    -fx-font-family: "Microsoft JhengHei", monospace, sans-serif;
+    /*-fx-font-family: "PMingLiU", monospace, sans-serif;*/
+    -fx-font-size: 18;
+
+    -fx-gray-light:      #7c7c7c;
+    -fx-gray-dark:       #525252;
+
+    -fx-background-color: radial-gradient(center 50% 50%, radius 80%, -fx-base-ultraLight 0, -fx-base-lighter 40%, -fx-base-light 70%);
+    -fx-focus-color: derive(-fx-base-dark, -50%);
+
+    -fx-base-gradient: linear-gradient(to right, -fx-base-light 5%, -fx-base-lighter 50%, -fx-base-light 95%);
+    -fx-box-gradient: linear-gradient( white 0%, rgb(225,225,225) 40%, rgb(245, 245, 245) 80%, rgb(246, 246, 246) 100%);
+
+    /**********************
+        States
+    **********************/
+    -fx-focus-base: rgb(255,230,230);
+    -fx-focus-color: derive(-fx-focus-base, -80%); /* Focused Elements BorderColor */
+    -fx-focus-gradient: linear-gradient( white 0%, -fx-focus-base 15%, -fx-focus-base 80%, rgb(230,230,230) 100%);
+
+    /* required */
+    -fx-required-base: rgb(255, 248, 131);
+    -fx-required-gradient: linear-gradient(-fx-required-base 0%, derive(-fx-required-base, 20%) 100%);
+
+    /* disabled */
+    -fx-disabled-opacity: 1;
+    -fx-box-disabled-gradient: linear-gradient(rgb(204,204,204) 0%, rgb(204,204,204) 100%);
+
+    /* error */
+    -fx-error-color1: #e10000;
+    -fx-error-color2: #ffcccc;
+    -fx-error-base: -fx-error-color1;
+    -fx-error-gradient: linear-gradient(-fx-error-color2 0%, derive(-fx-error-color2, 5%) 100%);
+}
+.hn-login-gradient-mask {
+    -fx-background-color: linear-gradient(-fx-base 0%, rgba(255,255,255,0) 100%);
+}
+/** Login-Panel **/
+
+.hn-login-panel {
+    -fx-font-weight: bold;
+}
+/*-- ComboBox --*/
+.hn-login-panel .combo-box-base,
+.hn-login-panel .combo-box:editable .text-field {
+    -fx-background-color: transparent, #999999, linear-gradient( white 0%, white 100%), -fx-box-gradient;
+    -fx-background-radius: 3;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(three-pass-box, gray, 1, 1.0, 0, 1);
+    -fx-prompt-text-fill: #222222;
+}
+.hn-login-panel .combo-box:editable .text-field {
+    -fx-effect: null;
+}
+.hn-login-panel .combo-box-base .arrow-button {
+    -fx-background-color: transparent, #cccccc, linear-gradient( #cccccc 0%, white 100%), -fx-box-gradient;
+    -fx-background-radius: 0 1 1 0;
+    -fx-background-insets: 2;
+}
+.hn-login-panel .combo-box-base .arrow {
+    -fx-background-insets: 1 0 0 0;
+    -fx-padding: 4 8 4 6;
+}
+.hn-login-panel .combo-box-base:hover {}
+.hn-login-panel .combo-box-base:hover .arrow-button {}
+
+/* required */
+.hn-login-panel .combo-box.hn-required,
+.hn-login-panel .combo-box.hn-required .arrow-button {
+    -fx-background-color: transparent, #999999, linear-gradient( white 0%, white 100%), -fx-required-gradient;
+}
+.hn-login-panel .combo-box-base:focused,
+.hn-login-panel .combo-box-base:focused .arrow-button,
+.hn-login-panel .combo-box.hn-required:focused,
+.hn-login-panel .combo-box.hn-required:focused .arrow-button,
+.hn-login-panel .combo-box:editable .text-field:focused {
+    -fx-background-color: -fx-focus-color, #cccccc, linear-gradient( white 0%, white 100%), -fx-focus-gradient;
+}
+
+/* disabled */
+.hn-login-panel .combo-box-base:disabled,
+.hn-login-panel .combo-box-base:disabled.hn-required {
+    -fx-opacity: 1;
+    -fx-background-color: transparent, #999999, linear-gradient( white 0%, white 100%), -fx-box-disabled-gradient;
+    -fx-background-radius: 2;
+}
+.hn-login-panel .combo-box-base:disabled .text-field,
+.hn-login-panel .combo-box-base:disabled .arrow-button,
+.hn-login-panel .combo-box-base:disabled.hn-required .arrow-button {
+    -fx-background-color: transparent, #cccccc, linear-gradient( #cccccc 0%, white 100%), -fx-box-disabled-gradient;
+    -fx-background-radius: 0 1 1 0;
+    -fx-background-insets: 2;
+}
+/* error */
+.hn-login-panel .combo-box-base.error {
+    -fx-background-color: -fx-error-base, transparent, white, -fx-error-gradient;
+    -fx-background-radius: 2;
+    -fx-effect: dropshadow(one-pass-box, gray, 2, 1.0, 0, 1);
+}
+.hn-login-panel .combo-box-base.error .list-cell {
+    -fx-text-fill: derive(-fx-error-base, -10%);
+}
+.hn-login-panel .combo-box-base.error .arrow-button {
+    -fx-background-color: transparent, -fx-error-base, white, -fx-error-gradient;
+}
+.hn-login-panel .combo-box-base.error .arrow-button .arrow {
+    -fx-background-color: derive(-fx-error-base, -10%);
+}
+.hn-login-panel .combo-box {
+    -fx-background-radius: 3;
+}
+.hn-login-panel .combo-box .list-cell {
+    -fx-background: transparent;
+    -fx-background-color: transparent;
+    -fx-padding: 3 0 1 10;
+    -fx-cell-size: 1em;
+    -fx-font-size: 18;
+}
+.hn-login-panel .combo-box .list-cell .text {
+    -fx-font-size: 18;
+}
+.hn-login-panel .combo-box:showing .list-cell {
+    -fx-text-fill: black;
+}
+.hn-login-panel .combo-box-popup .list-view {
+    -fx-background-color: rgb(76,81,86),rgb(228,233,238);
+    -fx-background-insets: 0,1;
+    -fx-font-size: 18;
+}
+/*-- TextField
+.hn-login-Username {
+    -fx-background-image: url('../images/icon-login-username.png');
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 8 8;
+}
+.hn-login-Password {
+    -fx-background-image: url('../images/icon-login-password.png');
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 8 8;
+}
+.hn-login-BankNo {
+    -fx-background-image: url('../images/icon-login-bankNo.png');
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 8 8;
+} --*/
+.hn-login-panel .text-field {
+    -fx-background-radius: 3;
+    -fx-background-color: transparent, #999999, linear-gradient( white 0%, white 100%), linear-gradient( #cccccc 0%, white 50%);
+    -fx-font-weight: bold;
+    -fx-padding: 0 10 0 10;
+    -fx-highlight-fill: -fx-base-ultraDark;
+    -fx-highlight-text-fill: white;
+    -fx-effect: dropshadow(three-pass-box, gray, 1, 1.0, 0, 1);
+}
+.hn-login-panel .text-field:focused {
+    -fx-background-color: -fx-focus-color, #cccccc, linear-gradient( white 0%, white 100%), -fx-focus-gradient;
+    -fx-font-weight: bold;
+}
+.hn-login-panel .text-field:disabled {
+    -fx-opacity: 0.8;
+    -fx-background-color: transparent, #999999, linear-gradient( white 0%, white 100%), -fx-box-disabled-gradient;
+    -fx-background-radius: 3;
+}
+.hn-login-panel .password-field {
+    -fx-font-family: "Microsoft JhengHei", monospace, sans-serif;
+}
+.hn-login-panel .password-field.caps:focused {
+    -fx-background-image: url("../images/pwd_caps_bkg.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: right;
+}
+.hn-login-panel .password-field.caps1:focused {
+    -fx-background-image: url("../images/pwd_caps_bkg1.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: right;
+}
+.hn-login-panel .separator .line {
+    -fx-border-style: none;
+    -fx-border-width: 1;
+}
+.hn-login-panel .separator:horizontal .line {
+    -fx-background-color: rgba(255,255,255,0), linear-gradient(to bottom, #cccccc 0, rgba(255,255,255,0) 100%);
+    -fx-background-insets: 1 1 0 1,1;
+    -fx-padding: 5 0 3 0;
+    -fx-opacity: 0.7;
+}
+.hn-login-BtnWrap {
+    -fx-background-color: linear-gradient(#cccccc 0, rgba(255,255,255,0) 20%);
+}
+.hn-login-Btn {
+    -fx-background-color: rgba(255,255,255,0), rgba(255,255,255,0), linear-gradient(to bottom, -fx-gray-light 0%, -fx-gray-dark 100%), linear-gradient(to bottom, derive(-fx-gray-light,-20%) 0%, derive(-fx-gray-dark,-20%) 100%);
+    -fx-background-insets: 0,0,0,1;
+    -fx-background-radius: 3;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(one-pass-box, derive(-fx-gray-dark, -30%), 1, 1.0, 0, 2);
+    -fx-padding: 5;
+}
+.hn-login-Btn:focused {
+    -fx-background-color: white, rgba(255,255,255,0), linear-gradient(to bottom, derive(-fx-gray-dark, -20%) 0%, -fx-gray-dark 100%), linear-gradient(to bottom, derive(-fx-gray-light, 10%) 0%, -fx-gray-dark 100%);
+}
+.hn-login-Btn:hover:pressed,
+.hn-login-Btn:armed {
+    -fx-background-color: white, rgba(255,255,255,0), linear-gradient(to bottom, -fx-gray-dark 0%, derive(-fx-gray-dark, -30%)  100%), linear-gradient(to bottom, derive(-fx-gray-dark, -30%) 0%, -fx-gray-dark 100%);
+    -fx-background-insets: 1 0 0 0;
+    -fx-padding: 1 0 0 0;
+}
+/** Login BottomBar **/
+
+.hn-login-bottomBar {
+    -fx-background-color: radial-gradient(center 50% 0%, radius 80%, -fx-base-light 0, -fx-base-darker 70%);
+}
+.hn-login-bottomBarShadow {
+    -fx-background-color: linear-gradient(to right, -fx-base-ultraDark 20%, -fx-base-dark 50%, -fx-base-ultraDark 80%);
+}
+/** login BroadCastWrap **/
+.hn-login-broadCastWrap {
+    -fx-background-radius: 2;
+    -fx-background-color: linear-gradient(-fx-base 0, white 100%);
+    -fx-effect: innershadow(gaussian, #666666, 10, 0.1, 0, 0);
+}
+.hn-login-dateTimeBox {
+    -fx-background-color: rgba(41, 41, 41, 0.80);
+    -fx-font-family: Arial;
+}
+.hn-login-date {
+    -fx-text-fill: white;
+}
+.hn-login-timebox {
+    -fx-background-color: linear-gradient(-fx-base-light 0, -fx-base-ultraLight 100%);
+    -fx-background-radius: 1;
+    -fx-border-color: derive(-fx-base-light, -40%);
+    -fx-border-width: 0;
+    -fx-effect: innershadow(gaussian, #666666, 10, 0.1, 0, 0);
+}
+.hn-login-time {
+    -fx-text-fill: black;
+}
+/** login InfoWrap **/
+.hn-logout-status .label {
+    -fx-font-size: 15;
+    -fx-text-fill: -fx-gray-dark;
+    -fx-translate-y: 1;
+}
+.hn-login-infoWrap {
+    -fx-minimize-color1: #222222;
+    -fx-minimize-color2: #777777;
+    -fx-logout-color1: #790000;
+    -fx-logout-color2: #FF0000;
+}
+.hn-login-infoWrap .label {
+    -fx-font-family: Arial;
+}
+.hn-login-infoTitle {
+    -fx-font-size: 13;
+    -fx-text-fill: -fx-base-darker;
+}
+.hn-login-infoValue {
+    -fx-font-size: 18;
+    -fx-text-fill: -fx-gray-dark;
+}
+/** Login Window Control Buttons **/
+.hn-minimize.button {
+    -fx-background-color: linear-gradient(-fx-minimize-color1 0, -fx-minimize-color2 100%);
+    -fx-background-radius: 1 0 0 0;
+    -fx-border-width: 0 0 3 0;
+    -fx-border-color: -fx-minimize-color1;
+    -fx-cursor: hand;
+}
+.hn-minimize.button:focused {
+    -fx-background-color: linear-gradient(to bottom, derive(-fx-minimize-color1, 10%) 0%, derive(-fx-minimize-color2, 30%) 100%);
+    -fx-background-insets: 0;
+}
+.hn-minimize.button:hover:pressed,
+.hn-minimize.button:armed {
+    -fx-background-color: linear-gradient(to bottom, derive(-fx-minimize-color1, -50%) 0%, derive(-fx-minimize-color2, -30%) 100%);
+    -fx-background-insets: 0;
+    -fx-padding: 1 0 0 0;
+}
+.hn-logout.button {
+    -fx-background-color: linear-gradient(-fx-logout-color1 0, -fx-logout-color2 100%);
+    -fx-background-radius: 0 1 0 0;
+    -fx-border-width: 0 0 3 0;
+    -fx-border-color: -fx-logout-color1;
+    -fx-cursor: hand;
+}
+.hn-logout.button:focused {
+    -fx-background-color: linear-gradient(to bottom, derive(-fx-logout-color1, 10%) 0%, derive(-fx-logout-color2, 30%) 100%);
+    -fx-background-insets: 0;
+}
+.hn-logout.button:hover:pressed,
+.hn-logout.button:armed {
+    -fx-background-color: linear-gradient(to bottom, derive(-fx-logout-color1, -50%) 0%, derive(-fx-logout-color2, -30%) 100%);
+    -fx-background-insets: 0;
+    -fx-padding: 1 0 0 0;
+}
